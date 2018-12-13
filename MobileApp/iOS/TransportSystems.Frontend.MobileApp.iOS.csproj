@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    </PropertyGroup>
+    <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>cfe8a906-1141-449a-be08-ea4ac5b8c77e</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TransportSystems.Frontend.MobileApp.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>TransportSystems.Frontend.MobileApp.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Screens_Orders_Icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Screens_Orders_Icon.imageset\orders.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Screens_Settings_Icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Screens_Settings_Icon.imageset\settings.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="Resources\ITunesArtwork" />
+    <ITunesArtwork Include="Resources\ITunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Views\SignUp\Dispatcher\DispatcherLocationView.xib" />
+    <InterfaceDefinition Include="Views\SignUp\Dispatcher\DispatcherView.xib" />
+    <InterfaceDefinition Include="Views\SignUp\Driver\DriverLocationView.xib" />
+    <InterfaceDefinition Include="Views\SignUp\Driver\DriverView.xib" />
+    <InterfaceDefinition Include="Views\SignUp\Driver\VehicleView.xib" />
+    <InterfaceDefinition Include="Views\SignUp\UserTypeSelectorView.xib" />
+    <InterfaceDefinition Include="Views\SignIn\SignInPhoneView.xib" />
+    <InterfaceDefinition Include="Views\SignIn\VerifyCodeView.xib" />
+    <InterfaceDefinition Include="Views\SignUp\FinishedSignUpView.xib" />
+    <InterfaceDefinition Include="Views\Orders\OrdersView.xib" />
+    <InterfaceDefinition Include="Views\Settings\SettingsView.xib" />
+    <InterfaceDefinition Include="Views\Cargo\CargoView.xib" />
+    <InterfaceDefinition Include="Views\Home\HomeView.xib" />
+    <InterfaceDefinition Include="Views\Addresses\AddressesView.xib" />
+    <InterfaceDefinition Include="Views\Booking\BookingView.xib" />
+    <InterfaceDefinition Include="Views\Users\CustomerView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Views\SignUp\Dispatcher\DispatcherLocationView.cs" />
+    <Compile Include="Views\SignUp\Dispatcher\DispatcherLocationView.designer.cs">
+      <DependentUpon>DispatcherLocationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp\Dispatcher\DispatcherView.cs" />
+    <Compile Include="Views\SignUp\Dispatcher\DispatcherView.designer.cs">
+      <DependentUpon>..\..\SignIn\Dispatcher\DispatcherView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp\Driver\DriverLocationView.cs" />
+    <Compile Include="Views\SignUp\Driver\DriverLocationView.designer.cs">
+      <DependentUpon>DriverLocationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp\Driver\DriverView.cs" />
+    <Compile Include="Views\SignUp\Driver\DriverView.designer.cs">
+      <DependentUpon>..\..\SignIn\Driver\DriverView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp\Driver\VehicleView.cs" />
+    <Compile Include="Views\SignUp\Driver\VehicleView.designer.cs">
+      <DependentUpon>..\..\SignIn\Driver\VehicleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp\UserTypeSelectorView.cs" />
+    <Compile Include="Views\SignUp\UserTypeSelectorView.designer.cs">
+      <DependentUpon>UserTypeSelectorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignIn\SignInPhoneView.cs" />
+    <Compile Include="Views\SignIn\SignInPhoneView.designer.cs">
+      <DependentUpon>SignInPhoneView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignIn\VerifyCodeView.cs" />
+    <Compile Include="Views\SignIn\VerifyCodeView.designer.cs">
+      <DependentUpon>VerifyCodeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp\FinishedSignUpView.cs" />
+    <Compile Include="Views\SignUp\FinishedSignUpView.designer.cs">
+      <DependentUpon>FinishedSignUpView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Orders\OrdersView.cs" />
+    <Compile Include="Views\Orders\OrdersView.designer.cs">
+      <DependentUpon>OrdersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsView.cs" />
+    <Compile Include="Views\Settings\SettingsView.designer.cs">
+      <DependentUpon>SettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cargo\CargoView.cs" />
+    <Compile Include="Views\Cargo\CargoView.designer.cs">
+      <DependentUpon>CargoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\HomeView.cs" />
+    <Compile Include="Views\Home\HomeView.designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Addresses\AddressesView.cs" />
+    <Compile Include="Views\Addresses\AddressesView.designer.cs">
+      <DependentUpon>AddressesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Booking\BookingView.cs" />
+    <Compile Include="Views\Booking\BookingView.designer.cs">
+      <DependentUpon>BookingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\CustomerView.cs" />
+    <Compile Include="Views\Users\CustomerView.designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Views\SignIn\" />
+    <Folder Include="Views\SignUp\" />
+    <Folder Include="Views\SignUp\Dispatcher\" />
+    <Folder Include="Views\SignUp\Driver\" />
+    <Folder Include="Views\Orders\" />
+    <Folder Include="Views\Settings\" />
+    <Folder Include="Views\Cargo\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Addresses\" />
+    <Folder Include="Views\Booking\" />
+    <Folder Include="Views\Users\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="UserTypeSelectorView.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\App\TransportSystems.Frontend.App.csproj">
+      <Project>{6EBA7717-CCCD-4861-9508-087618EF5082}</Project>
+      <Name>TransportSystems.Frontend.App</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="OxyPlot.Core" Version="2.0.0-unstable1035" />
+    <PackageReference Include="OxyPlot.Xamarin.iOS" Version="1.1.0-unstable0011" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="TZStackView" Version="1.1.1" />
+    <PackageReference Include="Com.Airbnb.iOS.Lottie">
+      <Version>2.5.4</Version>
+    </PackageReference>
+    <PackageReference Include="Cirrious.FluentLayout">
+      <Version>2.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross">
+      <Version>6.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Color">
+      <Version>6.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Json">
+      <Version>6.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Messenger">
+      <Version>6.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Visibility">
+      <Version>6.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.Emit" Version="4.3.0">
+      <ExcludeAssets>all</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+
+
+</Project>

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Settings\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Garages\" />
+    <Folder Include="SignUp\" />
+    <Folder Include="Transport\" />
+    <Folder Include="Identity\" />
+    <Folder Include="Cargo\" />
+    <Folder Include="Address\" />
+    <Folder Include="Booking\" />
+    <Folder Include="Orders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Rest\IRestClient.cs" />
+    <Compile Remove="SignIn\ISignInRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\TransportSystems.Frontend.Core.Domain.Core.csproj" />
+    <ProjectReference Include="..\..\..\External\Models\TransportSystems.Frontend.External.Models.csproj" />
+  </ItemGroup>
+</Project>

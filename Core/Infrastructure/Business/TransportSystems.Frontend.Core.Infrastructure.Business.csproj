@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Interfaces\TransportSystems.Frontend.Core.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\..\..\External\Models\TransportSystems.Frontend.External.Models.csproj" />
+    <ProjectReference Include="..\..\..\External\Interfaces\TransportSystems.Frontend.External.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Services\Interfaces\TransportSystems.Frontend.Core.Services.Interfaces.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Settings\" />
+    <Folder Include="Signin\" />
+    <Folder Include="SignUp\" />
+    <Folder Include="Garages\" />
+    <Folder Include="Transport\" />
+    <Folder Include="Identity\" />
+    <Folder Include="Cargo\" />
+    <Folder Include="Booking\" />
+    <Folder Include="Orders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Handlers\AuthenticatedHttpClientHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+  </ItemGroup>
+</Project>

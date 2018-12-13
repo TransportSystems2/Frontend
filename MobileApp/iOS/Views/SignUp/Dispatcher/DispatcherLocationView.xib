@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DispatcherLocationView">
+            <connections>
+                <outlet property="CityLabel" destination="dJt-5b-bCg" id="vbd-Gj-Ie9"/>
+                <outlet property="CityTextField" destination="AER-93-0uM" id="C1b-ms-7eO"/>
+                <outlet property="ProvinceLabel" destination="LAg-Se-pi1" id="buW-tY-dFy"/>
+                <outlet property="ProvinceTextField" destination="Xa2-Lt-dPV" id="HQR-16-EAm"/>
+                <outlet property="RegionLabel" destination="jEp-xs-eiu" id="3Vn-4v-iVy"/>
+                <outlet property="RegionTextField" destination="XvL-9X-JL4" id="77T-uc-rJ4"/>
+                <outlet property="RegisterButton" destination="5fW-5o-vOy" id="IGX-Ml-Zcj"/>
+                <outlet property="view" destination="UYF-je-TVx" id="7Wy-RU-xgk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="UYF-je-TVx">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Область" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAg-Se-pi1">
+                    <rect key="frame" x="16" y="36" width="49.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xa2-Lt-dPV">
+                    <rect key="frame" x="16" y="58.5" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJt-5b-bCg">
+                    <rect key="frame" x="16" y="104.5" width="35" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AER-93-0uM">
+                    <rect key="frame" x="16" y="127" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Район" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEp-xs-eiu">
+                    <rect key="frame" x="16" y="173" width="36.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XvL-9X-JL4">
+                    <rect key="frame" x="16" y="195.5" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-5o-vOy">
+                    <rect key="frame" x="16" y="629" width="343" height="30"/>
+                    <state key="normal" title="Далее"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QTM-tV-80F" firstAttribute="trailing" secondItem="5fW-5o-vOy" secondAttribute="trailing" constant="16" id="0Ab-r7-HOn"/>
+                <constraint firstItem="AER-93-0uM" firstAttribute="top" secondItem="dJt-5b-bCg" secondAttribute="bottom" constant="8" id="2Rz-RY-Kvw"/>
+                <constraint firstItem="dJt-5b-bCg" firstAttribute="leading" secondItem="LAg-Se-pi1" secondAttribute="leading" id="4gI-yK-tED"/>
+                <constraint firstItem="jEp-xs-eiu" firstAttribute="leading" secondItem="dJt-5b-bCg" secondAttribute="leading" id="C5b-80-bRJ"/>
+                <constraint firstItem="LAg-Se-pi1" firstAttribute="leading" secondItem="QTM-tV-80F" secondAttribute="leading" constant="16" id="CCb-vk-hYc"/>
+                <constraint firstItem="AER-93-0uM" firstAttribute="leading" secondItem="Xa2-Lt-dPV" secondAttribute="leading" id="CQN-XR-RPH"/>
+                <constraint firstItem="5fW-5o-vOy" firstAttribute="leading" secondItem="QTM-tV-80F" secondAttribute="leading" constant="16" id="E9O-vM-bk9"/>
+                <constraint firstItem="XvL-9X-JL4" firstAttribute="leading" secondItem="AER-93-0uM" secondAttribute="leading" id="GFM-4i-pW2"/>
+                <constraint firstItem="dJt-5b-bCg" firstAttribute="top" secondItem="Xa2-Lt-dPV" secondAttribute="bottom" constant="16" id="LgY-KR-2pK"/>
+                <constraint firstItem="LAg-Se-pi1" firstAttribute="top" secondItem="QTM-tV-80F" secondAttribute="top" constant="16" id="Pky-rq-pDC"/>
+                <constraint firstItem="XvL-9X-JL4" firstAttribute="top" secondItem="jEp-xs-eiu" secondAttribute="bottom" constant="8" id="Xgt-0j-B3L"/>
+                <constraint firstItem="jEp-xs-eiu" firstAttribute="top" secondItem="AER-93-0uM" secondAttribute="bottom" constant="16" id="YXr-Y8-vWo"/>
+                <constraint firstItem="AER-93-0uM" firstAttribute="trailing" secondItem="Xa2-Lt-dPV" secondAttribute="trailing" id="ZyO-NC-gl3"/>
+                <constraint firstItem="Xa2-Lt-dPV" firstAttribute="top" secondItem="LAg-Se-pi1" secondAttribute="bottom" constant="8" id="d91-AY-Qg9"/>
+                <constraint firstItem="Xa2-Lt-dPV" firstAttribute="leading" secondItem="QTM-tV-80F" secondAttribute="leading" constant="16" id="hlJ-Y4-ODT"/>
+                <constraint firstItem="QTM-tV-80F" firstAttribute="trailing" secondItem="Xa2-Lt-dPV" secondAttribute="trailing" constant="16" id="vxV-nG-b2d"/>
+                <constraint firstItem="QTM-tV-80F" firstAttribute="bottom" secondItem="5fW-5o-vOy" secondAttribute="bottom" constant="8" id="vz0-Ec-Qqm"/>
+                <constraint firstItem="XvL-9X-JL4" firstAttribute="trailing" secondItem="AER-93-0uM" secondAttribute="trailing" id="xfN-FE-K9V"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="QTM-tV-80F"/>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

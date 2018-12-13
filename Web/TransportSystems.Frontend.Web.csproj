@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <AssemblyName>TransportSystems.Frontend.Web</AssemblyName>
+        <ApplicationIcon />
+        <OutputType>Exe</OutputType>
+        <StartupObject />
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.1.1.1" />
+        <PackageReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Update="wwwroot\**\*">
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </None>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\Backend\Core\Domain.Core\TransportSystems.Backend.Core.Domain.Core.csproj" />
+        <ProjectReference Include="..\..\Backend\Core\Domain.Interfaces\TransportSystems.Backend.Core.Domain.Interfaces.csproj" />
+        <ProjectReference Include="..\..\Backend\Core\Infrastructure.Business\TransportSystems.Backend.Core.Infrastructure.Business.csproj" />
+        <ProjectReference Include="..\..\Backend\Core\Services.Interfaces\TransportSystems.Backend.Core.Services.Interfaces.csproj" />
+        <ProjectReference Include="..\..\Backend\Core\Infrastructure.Database\TransportSystems.Backend.Core.Infrastructure.Database.csproj" />
+    </ItemGroup>
+    <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+        <Exec Command="bower install" />
+        <Exec Command="dotnet bundle" />
+    </Target>
+</Project>

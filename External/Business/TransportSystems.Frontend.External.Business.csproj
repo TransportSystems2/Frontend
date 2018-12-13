@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="ConfigurationService.cs" />
+    <Compile Remove="HttpClientFactory.cs" />
+    <Compile Remove="Profiles\IdentityServer\IdentityServerProfile.cs" />
+    <Compile Remove="IdentityServer\ExternalIdentityServerConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IdentityServer\" />
+    <Folder Include="IdentityServer\Discovery\" />
+    <Folder Include="IdentityServer\UserInfo\" />
+    <Folder Include="IdentityServer\Token\" />
+    <Folder Include="IdentityServer\Introspection\" />
+    <Folder Include="IdentityServer\Config\" />
+    <Folder Include="Profiles\" />
+    <Folder Include="Profiles\" />
+    <Folder Include="IdentityServer\Config\" />
+    <Folder Include="IdentityServer\SignOut\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interfaces\TransportSystems.Frontend.External.Interfaces.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="3.9.0" />
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="Refit" Version="4.6.48" />
+    <PackageReference Include="fusillade" Version="1.0.0" />
+  </ItemGroup>
+</Project>

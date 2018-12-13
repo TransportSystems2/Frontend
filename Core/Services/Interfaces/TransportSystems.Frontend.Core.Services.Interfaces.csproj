@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Core\TransportSystems.Frontend.Core.Domain.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Settings\" />
+    <Folder Include="Signin\" />
+    <Folder Include="SignUp\" />
+    <Folder Include="Garages\" />
+    <Folder Include="Transport\" />
+    <Folder Include="Identity\" />
+    <Folder Include="Cargo\" />
+    <Folder Include="Booking\" />
+    <Folder Include="Orders\" />
+  </ItemGroup>
+</Project>

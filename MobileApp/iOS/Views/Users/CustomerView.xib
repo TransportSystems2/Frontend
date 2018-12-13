@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomerView">
+            <connections>
+                <outlet property="NameTextField" destination="KsA-fg-S86" id="ldf-cH-qX0"/>
+                <outlet property="NextButton" destination="DLp-NV-9cm" id="2Ga-Nv-o1k"/>
+                <outlet property="PhoneTextField" destination="MXf-Ze-hh9" id="3oc-X6-Fnh"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KsA-fg-S86">
+                    <rect key="frame" x="16" y="36" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXf-Ze-hh9">
+                    <rect key="frame" x="16" y="82" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLp-NV-9cm">
+                    <rect key="frame" x="164" y="617" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KfN-Ub-G1O" firstAttribute="trailing" secondItem="KsA-fg-S86" secondAttribute="trailing" constant="16" id="0Yo-Mt-t9L"/>
+                <constraint firstItem="MXf-Ze-hh9" firstAttribute="top" secondItem="KsA-fg-S86" secondAttribute="bottom" constant="16" id="C1s-Yr-uwK"/>
+                <constraint firstItem="MXf-Ze-hh9" firstAttribute="leading" secondItem="KsA-fg-S86" secondAttribute="leading" id="G7j-Wm-gOM"/>
+                <constraint firstItem="KfN-Ub-G1O" firstAttribute="bottom" secondItem="DLp-NV-9cm" secondAttribute="bottom" constant="20" id="IKT-R3-2ln"/>
+                <constraint firstItem="KsA-fg-S86" firstAttribute="leading" secondItem="KfN-Ub-G1O" secondAttribute="leading" constant="16" id="Mp2-2R-CDO"/>
+                <constraint firstItem="KfN-Ub-G1O" firstAttribute="trailing" secondItem="DLp-NV-9cm" secondAttribute="trailing" constant="165" id="QXX-Aw-EjH"/>
+                <constraint firstItem="MXf-Ze-hh9" firstAttribute="trailing" secondItem="KsA-fg-S86" secondAttribute="trailing" id="gPT-NE-6Vf"/>
+                <constraint firstItem="KsA-fg-S86" firstAttribute="top" secondItem="KfN-Ub-G1O" secondAttribute="top" constant="16" id="qan-dZ-tVO"/>
+                <constraint firstItem="DLp-NV-9cm" firstAttribute="leading" secondItem="KfN-Ub-G1O" secondAttribute="leading" constant="164" id="wOF-E3-EsZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="KfN-Ub-G1O"/>
+        </view>
+    </objects>
+</document>

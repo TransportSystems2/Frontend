@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\External\Interfaces\TransportSystems.Frontend.External.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Domain\Interfaces\TransportSystems.Frontend.Core.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Domain\Core\TransportSystems.Frontend.Core.Domain.Core.csproj" />
+    <ProjectReference Include="..\..\..\Utils\src\TransportSystems.Frontend.Utils.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Garages\" />
+    <Folder Include="SignUp\" />
+    <Folder Include="Transport\" />
+    <Folder Include="Identity\" />
+    <Folder Include="Cargo\" />
+    <Folder Include="Addresses\" />
+    <Folder Include="Booking\" />
+    <Folder Include="Orders\" />
+  </ItemGroup>
+</Project>

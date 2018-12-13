@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="Moq" Version="4.10.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Addresses\" />
+    <Folder Include="Cargo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Interfaces\TransportSystems.Frontend.Core.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Http\TransportSystems.Frontend.Core.Infrastructure.Http.csproj" />
+    <ProjectReference Include="..\..\..\External\Business\TransportSystems.Frontend.External.Business.csproj" />
+    <ProjectReference Include="..\..\..\Utils\src\TransportSystems.Frontend.Utils.csproj" />
+    <ProjectReference Include="..\..\..\External\Models\TransportSystems.Frontend.External.Models.csproj" />
+  </ItemGroup>
+</Project>

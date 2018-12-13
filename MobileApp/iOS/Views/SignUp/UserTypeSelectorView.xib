@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserTypeSelectorView">
+            <connections>
+                <outlet property="DispatcherButton" destination="tVt-3U-F9o" id="P8f-o3-mr4"/>
+                <outlet property="DispatcherCaptionLabel" destination="oen-B1-QVv" id="1Jr-24-2at"/>
+                <outlet property="DispatcherDescriptionLabel" destination="bUu-JD-R5N" id="LrB-N5-En2"/>
+                <outlet property="DriverButton" destination="PsO-Kk-BvV" id="N6h-aK-xlL"/>
+                <outlet property="DriverCaptionLabel" destination="XP7-rv-v07" id="Uuy-7R-bqX"/>
+                <outlet property="DriverDescriptionLabel" destination="VU5-y0-R7J" id="o7S-G4-BrT"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsO-Kk-BvV">
+                    <rect key="frame" x="16" y="36" width="343" height="79.5"/>
+                    <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Я водитель" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XP7-rv-v07">
+                    <rect key="frame" x="32" y="44" width="84.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У меня есть эвакуатор, и я сам выезжаю на заказы" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VU5-y0-R7J">
+                    <rect key="frame" x="32" y="71.5" width="311" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVt-3U-F9o">
+                    <rect key="frame" x="16" y="135.5" width="343" height="97.5"/>
+                    <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Я диспетчер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oen-B1-QVv">
+                    <rect key="frame" x="32" y="143.5" width="95" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Я работаю с одним или несколькими водителями, распределяю заказы (сам на эвакуации не езжу)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUu-JD-R5N">
+                    <rect key="frame" x="32" y="171" width="311" height="54"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tVt-3U-F9o" firstAttribute="leading" secondItem="PsO-Kk-BvV" secondAttribute="leading" id="1cR-Ij-OiS"/>
+                <constraint firstItem="oen-B1-QVv" firstAttribute="top" secondItem="tVt-3U-F9o" secondAttribute="top" constant="8" id="6tq-Zn-gVa"/>
+                <constraint firstItem="bUu-JD-R5N" firstAttribute="top" secondItem="oen-B1-QVv" secondAttribute="bottom" constant="8" id="EiB-uq-tg1"/>
+                <constraint firstItem="tVt-3U-F9o" firstAttribute="trailing" secondItem="bUu-JD-R5N" secondAttribute="trailing" constant="16" id="Fbc-ZJ-FKj"/>
+                <constraint firstItem="bUu-JD-R5N" firstAttribute="leading" secondItem="oen-B1-QVv" secondAttribute="leading" id="I28-aZ-JHC"/>
+                <constraint firstItem="VU5-y0-R7J" firstAttribute="top" secondItem="XP7-rv-v07" secondAttribute="bottom" constant="8" id="KEz-rp-SS3"/>
+                <constraint firstItem="PsO-Kk-BvV" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="16" id="M4P-Cu-HUX"/>
+                <constraint firstItem="VU5-y0-R7J" firstAttribute="leading" secondItem="XP7-rv-v07" secondAttribute="leading" id="M4c-bu-6Iy"/>
+                <constraint firstItem="tVt-3U-F9o" firstAttribute="bottom" secondItem="bUu-JD-R5N" secondAttribute="bottom" constant="8" id="Qfz-5F-xb1"/>
+                <constraint firstItem="XP7-rv-v07" firstAttribute="leading" secondItem="PsO-Kk-BvV" secondAttribute="leading" constant="16" id="VOs-dk-mIt"/>
+                <constraint firstItem="tVt-3U-F9o" firstAttribute="trailing" secondItem="PsO-Kk-BvV" secondAttribute="trailing" id="aym-xW-M5Z"/>
+                <constraint firstItem="XP7-rv-v07" firstAttribute="top" secondItem="PsO-Kk-BvV" secondAttribute="top" constant="8" id="b2X-pU-L8t"/>
+                <constraint firstItem="PsO-Kk-BvV" firstAttribute="top" secondItem="v8g-1O-BXv" secondAttribute="top" constant="16" id="dOE-gh-A2t"/>
+                <constraint firstItem="PsO-Kk-BvV" firstAttribute="trailing" secondItem="VU5-y0-R7J" secondAttribute="trailing" constant="16" id="eq4-n4-gMt"/>
+                <constraint firstItem="PsO-Kk-BvV" firstAttribute="bottom" secondItem="VU5-y0-R7J" secondAttribute="bottom" constant="8" id="mMf-4z-hcg"/>
+                <constraint firstAttribute="trailing" secondItem="PsO-Kk-BvV" secondAttribute="trailing" constant="16" id="mZk-G0-gCu"/>
+                <constraint firstItem="tVt-3U-F9o" firstAttribute="top" secondItem="PsO-Kk-BvV" secondAttribute="bottom" constant="20" id="wiI-aa-6eK"/>
+                <constraint firstItem="oen-B1-QVv" firstAttribute="leading" secondItem="tVt-3U-F9o" secondAttribute="leading" constant="16" id="zWo-zA-8yx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="v8g-1O-BXv"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

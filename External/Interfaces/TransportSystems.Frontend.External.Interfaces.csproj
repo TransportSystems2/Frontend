@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="Apis\Garages\IGaragesAPI.cs" />
+    <Compile Remove="Apis\SignIn\ISignInAPI.cs" />
+    <Compile Remove="Apis\SignUp\ISignUpAPI.cs" />
+    <Compile Remove="Apis\Transport\IVehicleAPI.cs" />
+    <Compile Remove="IConfigurationService.cs" />
+    <Compile Remove="IHttpClientFactory.cs" />
+    <Compile Remove="IdentityServer\IExternalIdentityServerConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Refit" Version="4.6.30" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\TransportSystems.Frontend.External.Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IdentityServer\" />
+    <Folder Include="IdentityServer\Discovery\" />
+    <Folder Include="IdentityServer\UserInfo\" />
+    <Folder Include="IdentityServer\Token\" />
+    <Folder Include="IdentityServer\Introspection\" />
+    <Folder Include="IdentityServer\Config\" />
+    <Folder Include="IdentityServer\SignOut\" />
+    <Folder Include="Addresses\" />
+    <Folder Include="Booking\" />
+    <Folder Include="Orders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".DS_Store" />
+  </ItemGroup>
+</Project>

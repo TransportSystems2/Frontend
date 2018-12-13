@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\External\Interfaces\TransportSystems.Frontend.External.Interfaces.csproj" />
+      <ProjectReference Include="..\External\Business\TransportSystems.Frontend.External.Business.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="7.0.1" />
+    </ItemGroup>
+</Project>

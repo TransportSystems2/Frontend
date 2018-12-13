@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Addresses\" />
+    <Folder Include="Garages\" />
+    <Folder Include="Cargo\" />
+    <Folder Include="IdentityServer\" />
+    <Folder Include="SignIn\" />
+    <Folder Include="SignUp\" />
+    <Folder Include="Transport\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="ApiMockManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interfaces\TransportSystems.Frontend.External.Interfaces.csproj" />
+  </ItemGroup>
+</Project>

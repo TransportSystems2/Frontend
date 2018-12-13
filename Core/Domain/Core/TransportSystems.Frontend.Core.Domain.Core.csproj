@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Users\User.config" />
+    <None Remove="Token\s.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SignIn\" />
+    <Folder Include="SignUp\" />
+    <Folder Include="Geo\" />
+    <Folder Include="Transport\" />
+    <Folder Include="Users\" />
+    <Folder Include="Identity\" />
+    <Folder Include="Cargo\" />
+    <Folder Include="Catalogs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Transport\VehicleKind.cs" />
+    <Compile Remove="Transport\Routing\WaypointsEM.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyCodeView">
+            <connections>
+                <outlet property="CodeTextField" destination="Y2K-7G-gwD" id="8Um-Rw-6kF"/>
+                <outlet property="PhoneNumberLabel" destination="Xxe-Zh-iO1" id="zvY-QZ-wCG"/>
+                <outlet property="VerifyCodeButton" destination="ZPF-eP-Alw" id="gcO-Xj-oUj"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш номер телефона:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLq-Z4-pcB">
+                    <rect key="frame" x="16" y="36" width="176" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxe-Zh-iO1">
+                    <rect key="frame" x="197" y="46.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2K-7G-gwD">
+                    <rect key="frame" x="142" y="318" width="90" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="oj0-D2-xxV"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPF-eP-Alw">
+                    <rect key="frame" x="140.5" y="356" width="94" height="30"/>
+                    <state key="normal" title="Подтвердить"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hLq-Z4-pcB" firstAttribute="top" secondItem="l3a-Ez-7A4" secondAttribute="top" constant="16" id="3TA-bO-b9b"/>
+                <constraint firstItem="ZPF-eP-Alw" firstAttribute="centerX" secondItem="Y2K-7G-gwD" secondAttribute="centerX" id="DiA-1Q-7vR"/>
+                <constraint firstItem="Y2K-7G-gwD" firstAttribute="centerY" secondItem="l3a-Ez-7A4" secondAttribute="centerY" constant="-10.5" id="Y44-xt-w9t"/>
+                <constraint firstItem="Xxe-Zh-iO1" firstAttribute="leading" secondItem="hLq-Z4-pcB" secondAttribute="trailing" constant="5" id="fzz-NY-LbH"/>
+                <constraint firstItem="hLq-Z4-pcB" firstAttribute="leading" secondItem="l3a-Ez-7A4" secondAttribute="leading" constant="16" id="i4G-06-G7w"/>
+                <constraint firstItem="Y2K-7G-gwD" firstAttribute="centerX" secondItem="l3a-Ez-7A4" secondAttribute="centerX" id="odO-tT-7ol"/>
+                <constraint firstItem="Xxe-Zh-iO1" firstAttribute="centerY" secondItem="hLq-Z4-pcB" secondAttribute="centerY" id="we6-j5-E0b"/>
+                <constraint firstItem="ZPF-eP-Alw" firstAttribute="top" secondItem="Y2K-7G-gwD" secondAttribute="bottom" constant="8" id="wkP-cz-oaD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="l3a-Ez-7A4"/>
+        </view>
+    </objects>
+</document>

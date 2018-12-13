@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinishedSignUpView">
+            <connections>
+                <outlet property="CongratulationsLabel" destination="7Wn-m7-byh" id="PHe-UW-VlN"/>
+                <outlet property="DescriptionLabel" destination="zRJ-Ca-oyt" id="Ijy-pJ-REz"/>
+                <outlet property="FinishButton" destination="ooy-BM-q9E" id="gzD-sx-rcI"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поздравляем UserName, вы успешно зарегистрировались в диспетчерской службе ГосЭвакуатор." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wn-m7-byh">
+                    <rect key="frame" x="16" y="36" width="351" height="61"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На ваш счет зачислено 1500 бонусных рублей, используйте их при оплате комиссии за использованные заказы" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRJ-Ca-oyt">
+                    <rect key="frame" x="16" y="113" width="351" height="61"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooy-BM-q9E">
+                    <rect key="frame" x="16" y="629" width="343" height="30"/>
+                    <state key="normal" title="Готово"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zRJ-Ca-oyt" firstAttribute="top" secondItem="7Wn-m7-byh" secondAttribute="bottom" constant="16" id="5q7-Kv-rX8"/>
+                <constraint firstItem="0LW-Fy-vMi" firstAttribute="trailing" secondItem="ooy-BM-q9E" secondAttribute="trailing" constant="16" id="8u4-Tf-PTd"/>
+                <constraint firstItem="7Wn-m7-byh" firstAttribute="top" secondItem="0LW-Fy-vMi" secondAttribute="top" constant="16" id="B8A-r4-TBf"/>
+                <constraint firstItem="0LW-Fy-vMi" firstAttribute="bottom" secondItem="ooy-BM-q9E" secondAttribute="bottom" constant="8" id="IDe-0r-EVD"/>
+                <constraint firstItem="0LW-Fy-vMi" firstAttribute="trailing" secondItem="zRJ-Ca-oyt" secondAttribute="trailing" constant="8" id="OSI-mD-GSe"/>
+                <constraint firstItem="0LW-Fy-vMi" firstAttribute="trailing" secondItem="7Wn-m7-byh" secondAttribute="trailing" constant="8" id="Ra8-hn-phn"/>
+                <constraint firstItem="7Wn-m7-byh" firstAttribute="leading" secondItem="0LW-Fy-vMi" secondAttribute="leading" constant="16" id="Vmu-pS-XAa"/>
+                <constraint firstItem="zRJ-Ca-oyt" firstAttribute="leading" secondItem="7Wn-m7-byh" secondAttribute="leading" id="gUo-bk-Rhm"/>
+                <constraint firstItem="ooy-BM-q9E" firstAttribute="leading" secondItem="0LW-Fy-vMi" secondAttribute="leading" constant="16" id="xOL-bE-LaV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="0LW-Fy-vMi"/>
+        </view>
+    </objects>
+</document>

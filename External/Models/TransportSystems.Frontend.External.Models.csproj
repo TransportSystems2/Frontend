@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\IdentityServer\" />
+    <Folder Include="Profiles\IdentityServer\" />
+    <Folder Include="Models\IdentityServer\Discovery\" />
+    <Folder Include="Models\IdentityServer\UserInfo\" />
+    <Folder Include="Models\IdentityServer\Token\" />
+    <Folder Include="Models\IdentityServer\Introspection\" />
+    <Folder Include="Models\Cargo\" />
+    <Folder Include="Models\Catalogs\" />
+    <Folder Include="Models\Booking\" />
+    <Folder Include="Models\Billing\" />
+    <Folder Include="Models\Routing\" />
+    <Folder Include="Models\Orders\" />
+    <Folder Include="Models\Customer\" />
+  </ItemGroup>
+</Project>

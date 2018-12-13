@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\SignIn\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\SignIn\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Models\SignUp\" />
+    <Folder Include="ViewModels\SignUp\" />
+    <Folder Include="ViewModels\SignUp\Dispatcher\" />
+    <Folder Include="ViewModels\SignUp\Driver\" />
+    <Folder Include="Models\Geo\" />
+    <Folder Include="Models\SignUp\" />
+    <Folder Include="Models\Transport\" />
+    <Folder Include="Models\Users\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="ViewModels\Home\" />
+    <Folder Include="ViewModels\Orders\" />
+    <Folder Include="ViewModels\Settings\" />
+    <Folder Include="ViewModels\Cargo\" />
+    <Folder Include="ViewModels\Address\" />
+    <Folder Include="ViewModels\Booking\" />
+    <Folder Include="Models\Booking\" />
+    <Folder Include="Models\Routing\" />
+    <Folder Include="ViewModels\Customer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="MvvmCross" Version="6.2.2" />
+    <PackageReference Include="MvvmCross.Plugin.FieldBinding" Version="6.2.2" />
+    <PackageReference Include="MvvmCross.Plugin.Json" Version="6.2.2" />
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="IdentityModel" Version="3.10.1" />
+    <PackageReference Include="modernhttpclient-updated" Version="2.7.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Services\SignUp\ISignUpService.cs" />
+    <Compile Remove="Models\SignUp\SignUpModel.cs" />
+    <Compile Remove="Models\Home\HomeModel.cs" />
+    <Compile Remove="Extensions\MvxHttpClientFactoryExtensions.cs" />
+    <Compile Remove="Utils\CustomJsonConvert.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Services\Interfaces\TransportSystems.Frontend.Core.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Core\Infrastructure\Business\TransportSystems.Frontend.Core.Infrastructure.Business.csproj" />
+    <ProjectReference Include="..\Core\Domain\Interfaces\TransportSystems.Frontend.Core.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\Core\Infrastructure\Settings\TransportSystems.Frontend.Core.Infrastructure.Settings.csproj" />
+    <ProjectReference Include="..\Core\Infrastructure\Http\TransportSystems.Frontend.Core.Infrastructure.Http.csproj" />
+    <ProjectReference Include="..\External\Interfaces\TransportSystems.Frontend.External.Interfaces.csproj" />
+    <ProjectReference Include="..\External\Models\TransportSystems.Frontend.External.Models.csproj" />
+    <ProjectReference Include="..\Extensions\TransportSystems.Frondend.Extensions.csproj" />
+    <ProjectReference Include="..\External\Business\TransportSystems.Frontend.External.Business.csproj" />
+  </ItemGroup>
+</Project>
