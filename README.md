@@ -1,1 +1,1 @@
-master https://travis-ci.com/TransportSystems2/Frontend.svg?branch=master develop https://travis-ci.com/TransportSystems2/Frontend.svg?branch=develop
+master [![Build Status](https://travis-ci.com/TransportSystems2/Frontend.svg?branch=develop)](https://travis-ci.com/TransportSystems2/Frontend) develop [![Build Status](https://travis-ci.com/TransportSystems2/Frontend.svg?branch=master)](https://travis-ci.com/TransportSystems2/Frontend)
