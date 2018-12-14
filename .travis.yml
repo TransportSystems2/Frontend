@@ -2,13 +2,13 @@ language: csharp
 mono: none
 dotnet: 2.1.500
 install:
-- dotnet restore Frontend/External/UnitTests/Business/
-- dotnet restore Frontend/External/UnitTests/MockAPI/
-- dotnet restore Frontend/Utils/UnitTests/
+- dotnet restore External/UnitTests/Business/
+- dotnet restore External/UnitTests/MockAPI/
+- dotnet restore Utils/UnitTests/
 script:
-- dotnet build Frontend/External/UnitTests/Business/
-- dotnet test Frontend/External/UnitTests/Business/
-- dotnet build Frontend/External/UnitTests/MockAPI/
-- dotnet test Frontend/External/UnitTests/MockAPI/
-- dotnet build Frontend/Utils/UnitTests/
-- dotnet test Frontend/Utils/UnitTests/
+- dotnet build External/UnitTests/Business/
+- dotnet test External/UnitTests/Business/
+- dotnet build External/UnitTests/MockAPI/
+- dotnet test External/UnitTests/MockAPI/
+- dotnet build Utils/UnitTests/
+- dotnet test Utils/UnitTests/
