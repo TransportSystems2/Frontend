@@ -64,7 +64,7 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.Identity
 
         private bool IsInRole(List<Claim> userInfo, string role)
         {
-            return userInfo.Exists(c => c.Type.Equals("role") && c.Value.Equals(role));
+            return userInfo.Exists(c => c.Type.Equals("role") && c.Value.ToLower().Equals(role.ToLower()));
         }
     }
 }
