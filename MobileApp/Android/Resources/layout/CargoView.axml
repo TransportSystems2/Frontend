@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,12 +13,14 @@
         android:layout_marginRight="16dp"
         local:MvxBind="Text KindLabel" />
     <MvxSpinner
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
         android:textSize="40dp"
         local:MvxBind="ItemsSource Kinds;SelectedItem Kind" />
     <TextView
-        android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,12 +29,14 @@
         android:layout_marginRight="16dp"
         local:MvxBind="Text WeightLabel" />
     <MvxSpinner
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
         android:textSize="40dp"
         local:MvxBind="ItemsSource Weights;SelectedItem Weight" />
     <TextView
-        android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,12 +45,14 @@
         android:layout_marginRight="16dp"
         local:MvxBind="Text BrandLabel" />
     <MvxSpinner
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
         android:textSize="40dp"
         local:MvxBind="ItemsSource Brands;SelectedItem Brand" />
     <Button
-        android:text="Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
