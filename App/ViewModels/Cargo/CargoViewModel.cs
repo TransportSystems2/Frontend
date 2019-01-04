@@ -43,6 +43,8 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 
         public readonly INC<string> RegistrationNumber = new NC<string>();
 
+        public readonly INC<string> NextButtonLabel = new NC<string>();
+
         public IMvxCommand NextCommand { get; }
 
         protected CargoCatalogItemsDM AvailableCatalogItems { get; private set; }
@@ -53,14 +55,11 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
         {
             Title.Value = "Груз";
 
-            Kinds.Value = new List<string>();
-            Weights.Value = new List<string>();
-            Brands.Value = new List<string>();
-
             KindLabel.Value = "Тип";
             WeightLabel.Value = "Вес";
             BrandLabel.Value = "Марка";
             RegistrationNumberLabel.Value = "Гос. номер";
+            NextButtonLabel.Value = "Далее";
 
 #if DEBUG
             RegistrationNumber.Value = "Х827МН76";
@@ -81,16 +80,16 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
             AvailableCatalogItems = await CargoService.GetAvailableParams(RequestPriority.UserInitiated);
 
             var brands = AvailableCatalogItems.Brands.Select(i => i.Name);
-            Brands.Value.ClearAndAddRange(brands);
-            Brand.Value = brands.ElementAt(0);
+            Brands.Value = brands.ToList();
+            Brand.Value = brands.FirstOrDefault();
 
             var kinds = AvailableCatalogItems.Kinds.Select(i => i.Name);
-            Kinds.Value.ClearAndAddRange(kinds);
-            Kind.Value = kinds.ElementAt(0);
+            Kinds.Value = kinds.ToList();
+            Kind.Value = kinds.FirstOrDefault();
 
             var weights = AvailableCatalogItems.Weights.Select(i => i.Name);
-            Weights.Value.ClearAndAddRange(weights);
-            Weight.Value = weights.ElementAt(0);
+            Weights.Value = weights.ToList();
+            Weight.Value = weights.FirstOrDefault();
         }
 
         private async Task ShowAddressView()
