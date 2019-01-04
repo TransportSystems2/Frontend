@@ -140,6 +140,7 @@
     <Compile Include="Views\Orders\OrdersView.cs" />
     <Compile Include="Views\Settings\SettingsView.cs" />
     <Compile Include="Views\Cargo\CargoView.cs" />
+    <Compile Include="Views\Addressess\AddressesView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -172,6 +173,7 @@
     <AndroidResource Include="Resources\layout\OrdersView.axml" />
     <AndroidResource Include="Resources\values\dimens.xml" />
     <AndroidResource Include="Resources\layout\CargoView.axml" />
+    <AndroidResource Include="Resources\layout\AddressessView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -180,6 +182,7 @@
     <Folder Include="Views\Orders\" />
     <Folder Include="Views\Settings\" />
     <Folder Include="Views\Cargo\" />
+    <Folder Include="Views\Addressess\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
