@@ -3,4 +3,9 @@
     <string name="hello">Hello World, Click Me!</string>
     <string name="app_name">TransportSystems</string>
     <string name="app_message">App scaffolded with MvxScaffolding</string>
+    <string name="type">тип</string>
+    <string name="weight">вес</string>
+    <string name="brand">брэнд</string>
+    <string name="next">далее</string>
+    <string name="registration_number">рег. номер</string>
 </resources>

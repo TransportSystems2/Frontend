@@ -9,5 +9,9 @@ namespace TransportSystems.Frontend.External.Interfaces.Cargo
         [Headers("Authorization: Bearer")]
         [Get("/api/cargos/catalog_items")]
         Task<CargoCatalogItemsEM> GetAvailableParams();
+
+        [Headers("Authorization: Bearer")]
+        [Get("/api/cargos/valid_registration_number")]
+        Task<bool> ValidRegistrationNumber(string registrationNumber);
     }
 }

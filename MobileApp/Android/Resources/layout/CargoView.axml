@@ -11,7 +11,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        local:MvxBind="Text KindLabel" />
+        android:text="@string/type"/>
     <MvxSpinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        local:MvxBind="Text WeightLabel" />
+        android:text="@string/weight"/>
     <MvxSpinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        local:MvxBind="Text BrandLabel" />
+        android:text="@string/brand"/>
     <MvxSpinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,11 +52,28 @@
         android:layout_marginRight="16dp"
         android:textSize="40dp"
         local:MvxBind="ItemsSource Brands;SelectedItem Brand" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/registration_number"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/regNumberTextField"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        local:MvxBind="Text RegistrationNumber; Error Errors['RegistrationNumber']" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        local:MvxBind="Click NextCommand; Text NextButtonLabel" />
+        android:text="@string/next"
+        local:MvxBind="Click NextCommand; Enabled !Validating" />
 </LinearLayout>
