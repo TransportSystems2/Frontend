@@ -4,12 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using MvvmCross.Commands;
 using MvvmCross.Plugin.FieldBinding;
+using MvvmValidation;
+using TransportSystems.Frontend.App.Extensions;
 using TransportSystems.Frontend.App.ViewModels.Address;
 using TransportSystems.Frontend.Core.Domain.Core;
 using TransportSystems.Frontend.Core.Domain.Core.Booking;
 using TransportSystems.Frontend.Core.Domain.Core.Cargo;
 using TransportSystems.Frontend.Core.Services.Interfaces.Cargo;
-using TransportSystems.Frontend.Extensions;
 
 namespace TransportSystems.Frontend.App.ViewModels.Cargo
 {
@@ -18,6 +19,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
         public CargoViewModel(ICargoService cargoService)
         {
             CargoService = cargoService;
+            Validator = new ValidationHelper();
             NextCommand = new MvxAsyncCommand(ShowAddressView);
         }
 
@@ -27,52 +29,58 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 
         public readonly INC<ICollection<string>> Brands = new NC<ICollection<string>>();
 
-        public readonly INC<string> KindLabel = new NC<string>();
-
         public readonly INC<string> Kind = new NC<string>();
-
-        public readonly INC<string> BrandLabel = new NC<string>();
-
-        public readonly INC<string> Brand = new NC<string>();
-
-        public readonly INC<string> WeightLabel = new NC<string>();
 
         public readonly INC<string> Weight = new NC<string>();
 
-        public readonly INC<string> RegistrationNumberLabel = new NC<string>();
+        public readonly INC<string> Brand = new NC<string>();
 
         public readonly INC<string> RegistrationNumber = new NC<string>();
 
-        public readonly INC<string> NextButtonLabel = new NC<string>();
+        public readonly INC<bool> Validating = new NC<bool>();
+
+        public readonly INC<Dictionary<string, string>> Errors = new NC<Dictionary<string, string>>();
 
         public IMvxCommand NextCommand { get; }
 
-        protected CargoCatalogItemsDM AvailableCatalogItems { get; private set; }
-
         protected ICargoService CargoService { get; }
+
+        protected ValidationHelper Validator { get; set; }
+
+        protected CargoCatalogItemsDM AvailableCatalogItems { get; private set; }
 
         public override void Prepare()
         {
             Title.Value = "Груз";
 
-            KindLabel.Value = "Тип";
-            WeightLabel.Value = "Вес";
-            BrandLabel.Value = "Марка";
-            RegistrationNumberLabel.Value = "Гос. номер";
-            NextButtonLabel.Value = "Далее";
-
 #if DEBUG
             RegistrationNumber.Value = "Х827МН76";
 #endif
 
+            Validator.AddAsyncRule(nameof(RegistrationNumber), RegistrationNumberValidator);
+
             base.Prepare();
         }
 
-        public override async void Start()
+        public override void ViewAppearing()
         {
-            base.Start();
+            RegistrationNumber.Changed += HandleRegistrationNumberChanged;
 
+            base.ViewAppearing();
+        }
+
+        public override void ViewDisappearing()
+        {
+            RegistrationNumber.Changed -= HandleRegistrationNumberChanged;
+
+            base.ViewDisappearing();
+        }
+
+        public async override Task Initialize()
+        {
             await InitAvailableCargoParams();
+
+            await base.Initialize();
         }
 
         private async Task InitAvailableCargoParams()
@@ -94,7 +102,13 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 
         private async Task ShowAddressView()
         {
-            var modelIsInflated = (await InflateCargoModel() && await InflateBascetModel());
+            var propertiesIsValide = await Validate();
+            if (!propertiesIsValide)
+            {
+                return;
+            }
+
+            var modelIsInflated = await InflateCargoModel() && await InflateBascetModel();
             if (modelIsInflated)
             {
                 await NavigationService.Navigate<AddressesViewModel, BookingRequestDM>(Model);
@@ -121,6 +135,65 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
             Model.Basket.DitchValue = 1;
 
             return Task.FromResult(true);
+        }
+
+        private async Task<bool> Validate(string propertyName = "")
+        {
+            try
+            {
+                Validating.Value = true;
+
+                ValidationResult validationResult;
+                if (!string.IsNullOrEmpty(propertyName))
+                {
+                    validationResult = await Validator.ValidateAsync(propertyName);
+                }
+                else
+                {
+                    validationResult = await Validator.ValidateAllAsync();
+                }
+
+                Errors.Value = validationResult.AsDictionary();
+
+                return validationResult.IsValid;
+            }
+            finally
+            {
+                Validating.Value = false;
+            }
+        }
+
+        private async Task<RuleResult> RegistrationNumberValidator()
+        {
+            try
+            {
+                var isEmpty = string.IsNullOrEmpty(RegistrationNumber.Value);
+                if (isEmpty)
+                {
+                    return RuleResult.Invalid($"Укажите регистрационный номер. Пример: Д000ЧЮ77");
+                }
+
+                var isValid = await CargoService.ValidateRegistrationNumber(RegistrationNumber.Value, RequestPriority.UserInitiated);
+                if (!isValid)
+                {
+                    return RuleResult.Invalid($"Регистрационный номер {RegistrationNumber.Value} не корректен. Пример: Д000ЧЮ77");
+                }
+
+                return RuleResult.Valid();
+            }
+            catch(Exception)
+            {
+                //TODO залогировать причину возникновения ошибки
+                return RuleResult.Invalid("Ошибка валидации регистрационного номера");
+            }
+        }
+
+        private async void HandleRegistrationNumberChanged(object sender, EventArgs e)
+        {
+            if (RegistrationNumber.Value.Length > 7)
+            {
+                await Validate(nameof(RegistrationNumber));
+            }
         }
     }
 }
