@@ -29,6 +29,8 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 
         public readonly INC<ICollection<string>> Brands = new NC<ICollection<string>>();
 
+        public readonly INC<ICollection<int>> LockedWheelsList = new NC<ICollection<int>>();
+
         public readonly INC<string> Kind = new NC<string>();
 
         public readonly INC<string> Weight = new NC<string>();
@@ -36,6 +38,12 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
         public readonly INC<string> Brand = new NC<string>();
 
         public readonly INC<string> RegistrationNumber = new NC<string>();
+
+        public readonly INC<int> LockedWheels = new NC<int>();
+
+        public readonly INC<bool> LockedSteering = new NC<bool>();
+
+        public readonly INC<bool> Overturned = new NC<bool>();
 
         public readonly INC<bool> Validating = new NC<bool>();
 
@@ -52,6 +60,8 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
         public override void Prepare()
         {
             Title.Value = "Груз";
+            LockedWheelsList.Value = new List<int> { 1, 2, 3, 4};
+            LockedWheels.Value = 1;
 
 #if DEBUG
             RegistrationNumber.Value = "Х827МН76";
@@ -130,6 +140,9 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 
         private Task<bool> InflateBascetModel()
         {
+            Model.Basket.LockedWheelsValue = LockedWheels.Value;
+            Model.Basket.LockedSteeringValue = LockedSteering.Value ? 1 : 0;
+            Model.Basket.OverturnedValue = Overturned.Value ? 1 : 0;
             Model.Basket.KmValue = 300;
             Model.Basket.LoadingValue = 1;
             Model.Basket.DitchValue = 1;

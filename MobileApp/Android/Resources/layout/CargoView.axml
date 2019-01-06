@@ -68,6 +68,62 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="8dp"
         local:MvxBind="Text RegistrationNumber; Error Errors['RegistrationNumber']" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/locked_wheels"/>
+    <MvxSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="40dp"
+        local:MvxBind="ItemsSource LockedWheelsList;SelectedItem LockedWheels" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/locked_steering_label"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/locked_steering"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/locked_steering_label"
+            android:layout_alignBottom="@id/locked_steering_label"
+            android:layout_alignEnd="@id/locked_steering_label"
+            local:MvxBind="Checked LockedSteering" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/overturned_label"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/overturned"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/overturned_label"
+            android:layout_alignBottom="@id/overturned_label"
+            android:layout_alignEnd="@id/overturned_label"
+            local:MvxBind="Checked Overturned" />
+    </RelativeLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

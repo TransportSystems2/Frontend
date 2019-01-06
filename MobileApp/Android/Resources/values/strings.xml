@@ -8,4 +8,7 @@
     <string name="brand">брэнд</string>
     <string name="next">далее</string>
     <string name="registration_number">рег. номер</string>
+    <string name="locked_wheels">блокировано колес</string>
+    <string name="locked_steering">блокирован руль</string>
+    <string name="overturned">перевернут</string>
 </resources>
