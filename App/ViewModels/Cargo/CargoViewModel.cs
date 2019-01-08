@@ -43,7 +43,11 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 
         public readonly INC<bool> LockedSteering = new NC<bool>();
 
+        public readonly INC<bool> Ditch = new NC<bool>();
+
         public readonly INC<bool> Overturned = new NC<bool>();
+
+        public readonly INC<string> Comment = new NC<string>();
 
         public readonly INC<bool> Validating = new NC<bool>();
 
@@ -118,11 +122,18 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
                 return;
             }
 
-            var modelIsInflated = await InflateCargoModel() && await InflateBascetModel();
+            var modelIsInflated =  await InflateModel();
             if (modelIsInflated)
             {
                 await NavigationService.Navigate<AddressesViewModel, BookingRequestDM>(Model);
             }
+        }
+
+        private async Task<bool> InflateModel()
+        {
+            var modelIsInflated = await InflateCargoModel() && await InflateBascetModel();
+
+            return modelIsInflated;
         }
 
         private Task<bool> InflateCargoModel()
@@ -135,6 +146,8 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
             Model.Cargo.WeightCatalogItemId = weight.Id;
             Model.Cargo.BrandCatalogItemId = brand.Id;
 
+            Model.Cargo.Comment = Comment.Value;
+
             return Task.FromResult(true);
         }
 
@@ -142,10 +155,8 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
         {
             Model.Basket.LockedWheelsValue = LockedWheels.Value;
             Model.Basket.LockedSteeringValue = LockedSteering.Value ? 1 : 0;
+            Model.Basket.DitchValue = Ditch.Value ? 1 : 0;
             Model.Basket.OverturnedValue = Overturned.Value ? 1 : 0;
-            Model.Basket.KmValue = 300;
-            Model.Basket.LoadingValue = 1;
-            Model.Basket.DitchValue = 1;
 
             return Task.FromResult(true);
         }

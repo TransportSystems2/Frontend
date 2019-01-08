@@ -10,5 +10,7 @@
     <string name="registration_number">рег. номер</string>
     <string name="locked_wheels">блокировано колес</string>
     <string name="locked_steering">блокирован руль</string>
+    <string name="ditch">в кювете</string>
     <string name="overturned">перевернут</string>
+    <string name="comment">комментарий</string>
 </resources>
