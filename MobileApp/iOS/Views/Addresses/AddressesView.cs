@@ -1,5 +1,4 @@
-﻿using System;
-using CoreGraphics;
+﻿using CoreGraphics;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Binding.Views;
@@ -35,15 +34,6 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.Addresses
             ToTextField.InputAccessoryView = toolBar;
 
             var set = this.CreateBindingSet<AddressesView, AddressesViewModel>();
-            set.Bind(fromAddressPickerViewModel).For(p => p.SelectedItem).To(vm => vm.FromAddress);
-            set.Bind(fromAddressPickerViewModel).For(p => p.ItemsSource).To(vm => vm.Addresses);
-            set.Bind(toAddressPickerViewModel).For(p => p.SelectedItem).To(vm => vm.ToAddress);
-            set.Bind(toAddressPickerViewModel).For(p => p.ItemsSource).To(vm => vm.Addresses);
-            set.Bind(FromLabel).To(vm => vm.FromLabel);
-            set.Bind(FromTextField).To(vm => vm.FromAddress);
-            set.Bind(ToLabel).To(vm => vm.ToLabel);
-            set.Bind(ToTextField).To(vm => vm.ToAddress);
-            set.Bind(InputTextField).To(vm => vm.Request);
             set.Bind(NextButton).To(vm => vm.NextCommand);
             set.Apply();
         }
