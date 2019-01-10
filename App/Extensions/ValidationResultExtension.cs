@@ -6,7 +6,7 @@ namespace TransportSystems.Frontend.App.Extensions
 {
     public static class ValidationResultExtension
     {
-        public static Dictionary<string, string> AsDictionary(this ValidationResult result)
+        public static Dictionary<string, string> AsErrorDictionary(this ValidationResult result)
         {
             var dictionary = new Dictionary<string, string>();
             foreach (var item in result.ErrorList)

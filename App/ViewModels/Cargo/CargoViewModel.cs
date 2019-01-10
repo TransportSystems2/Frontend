@@ -20,7 +20,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
         {
             CargoService = cargoService;
             Validator = new ValidationHelper();
-            NextCommand = new MvxAsyncCommand(ShowAddressView);
+            NextCommand = new MvxAsyncCommand(NavigateToAddressView);
         }
 
         public readonly INC<ICollection<string>> Kinds = new NC<ICollection<string>>();
@@ -64,8 +64,8 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
         public override void Prepare()
         {
             Title.Value = "Груз";
-            LockedWheelsList.Value = new List<int> { 1, 2, 3, 4};
-            LockedWheels.Value = 1;
+            LockedWheelsList.Value = new List<int> { 0, 1, 2, 3, 4};
+            LockedWheels.Value = 0;
 
 #if DEBUG
             RegistrationNumber.Value = "Х827МН76";
@@ -114,7 +114,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
             Weight.Value = weights.FirstOrDefault();
         }
 
-        private async Task ShowAddressView()
+        private async Task NavigateToAddressView()
         {
             var propertiesIsValide = await Validate();
             if (!propertiesIsValide)
@@ -177,7 +177,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
                     validationResult = await Validator.ValidateAllAsync();
                 }
 
-                Errors.Value = validationResult.AsDictionary();
+                Errors.Value = validationResult.AsErrorDictionary();
 
                 return validationResult.IsValid;
             }
@@ -194,13 +194,13 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
                 var isEmpty = string.IsNullOrEmpty(RegistrationNumber.Value);
                 if (isEmpty)
                 {
-                    return RuleResult.Invalid($"Укажите регистрационный номер. Пример: Д000ЧЮ77");
+                    return RuleResult.Invalid($"Укажите регистрационный номер. Пример: Х000ХХ777");
                 }
 
                 var isValid = await CargoService.ValidateRegistrationNumber(RegistrationNumber.Value, RequestPriority.UserInitiated);
                 if (!isValid)
                 {
-                    return RuleResult.Invalid($"Регистрационный номер {RegistrationNumber.Value} не корректен. Пример: Д000ЧЮ77");
+                    return RuleResult.Invalid($"Регистрационный номер {RegistrationNumber.Value} не корректен. Пример: Х000ХХ777");
                 }
 
                 return RuleResult.Valid();
