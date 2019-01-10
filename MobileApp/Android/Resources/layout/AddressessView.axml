@@ -16,7 +16,7 @@
     <MvxAutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:MvxBind="Text FromAddressRequest; ItemsSource FromDomainAddresses; PartialText CurrentTextHint; SelectedObject SelectedFromAddress"/>
+        app:MvxBind="Text StartAddressRequest; ItemsSource StartDomainAddresses; PartialText CurrentTextHint; SelectedObject SelectedStartAddress"/>
     <TextView
         android:text="@string/to"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -28,7 +28,7 @@
     <MvxAutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:MvxBind="Text ToAddressRequest; ItemsSource ToDomainAddresses; PartialText CurrentTextHint; SelectedObject SelectedToAddressess"/>
+        app:MvxBind="Text EndAddressRequest; ItemsSource EndDomainAddresses; PartialText CurrentTextHint; SelectedObject SelectedEndAddressess"/>
     <TextView
         android:text="comment"
         android:textAppearance="?android:attr/textAppearanceMedium"

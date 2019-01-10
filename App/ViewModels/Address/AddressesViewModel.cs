@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using MvvmCross.Commands;
 using MvvmCross.Plugin.FieldBinding;
@@ -18,20 +17,20 @@ namespace TransportSystems.Frontend.App.ViewModels.Address
         {
             AddressesService = addressesService;
 
-            NextCommand = new MvxAsyncCommand(ShowBookingView);
+            NextCommand = new MvxAsyncCommand(NavigateToBookingView);
         }
 
-        public readonly INC<string> FromAddressRequest = new NC<string>();
+        public readonly INC<string> StartAddressRequest = new NC<string>();
 
-        public readonly INC<string> ToAddressRequest = new NC<string>();
+        public readonly INC<string> EndAddressRequest = new NC<string>();
 
-        public readonly INC<ICollection<AddressDM>> FromDomainAddresses = new NC<ICollection<AddressDM>>();
+        public readonly INC<ICollection<AddressDM>> StartDomainAddresses = new NC<ICollection<AddressDM>>();
 
-        public readonly INC<ICollection<AddressDM>> ToDomainAddresses = new NC<ICollection<AddressDM>>();
+        public readonly INC<ICollection<AddressDM>> EndDomainAddresses = new NC<ICollection<AddressDM>>();
 
-        public readonly INC<AddressDM> SelectedFromAddress = new NC<AddressDM>();
+        public readonly INC<AddressDM> SelectedStartAddress = new NC<AddressDM>();
 
-        public readonly INC<AddressDM> SelectedToAddressess = new NC<AddressDM>();
+        public readonly INC<AddressDM> SelectedEndAddressess = new NC<AddressDM>();
 
         public readonly INC<string> Comment = new NC<string>();
 
@@ -43,20 +42,20 @@ namespace TransportSystems.Frontend.App.ViewModels.Address
         {
             base.ViewAppearing();
 
-            FromAddressRequest.Changed += HandleFromAddressChanged;
-            ToAddressRequest.Changed += HandleToAddressChanged;
+            StartAddressRequest.Changed += HandleFromAddressChanged;
+            EndAddressRequest.Changed += HandleToAddressChanged;
         }
 
 
         public override void ViewDisappearing()
         {
-            FromAddressRequest.Changed -= HandleFromAddressChanged;
-            ToAddressRequest.Changed -= HandleToAddressChanged;
+            StartAddressRequest.Changed -= HandleFromAddressChanged;
+            EndAddressRequest.Changed -= HandleToAddressChanged;
 
             base.ViewDisappearing();
         }
 
-        private async Task ShowBookingView()
+        private async Task NavigateToBookingView()
         {
             if (await InflateWaypointsModel())
             {
@@ -66,13 +65,13 @@ namespace TransportSystems.Frontend.App.ViewModels.Address
 
         private Task<bool> InflateWaypointsModel()
         {
-            if (SelectedFromAddress.Value == null || SelectedToAddressess.Value == null)
+            if (SelectedStartAddress.Value == null || SelectedEndAddressess.Value == null)
             {
                 return Task.FromResult(false);
             }
 
-            Model.Waypoints.Points.Add(SelectedFromAddress.Value);
-            Model.Waypoints.Points.Add(SelectedToAddressess.Value);
+            Model.Waypoints.Points.Add(SelectedStartAddress.Value);
+            Model.Waypoints.Points.Add(SelectedEndAddressess.Value);
             Model.Waypoints.Comment = Comment.Value;
 
             return Task.FromResult(true);
@@ -80,19 +79,19 @@ namespace TransportSystems.Frontend.App.ViewModels.Address
 
         private async void HandleFromAddressChanged(object sender, EventArgs e)
         {
-            SelectedFromAddress.Value = null;
-            if (FromAddressRequest.Value.Length > 3)
+            SelectedStartAddress.Value = null;
+            if (StartAddressRequest.Value.Length > 3)
             {
-                FromDomainAddresses.Value = await AddressesService.GetAddresses(FromAddressRequest.Value, RequestPriority.UserInitiated);
+                StartDomainAddresses.Value = await AddressesService.GetAddresses(StartAddressRequest.Value, RequestPriority.UserInitiated);
             }
         }
 
         private async void HandleToAddressChanged(object sender, EventArgs e)
         {
-            SelectedToAddressess.Value = null;
-            if (ToAddressRequest.Value.Length > 3)
+            SelectedEndAddressess.Value = null;
+            if (EndAddressRequest.Value.Length > 3)
             {
-                ToDomainAddresses.Value = await AddressesService.GetAddresses(ToAddressRequest.Value, RequestPriority.UserInitiated);
+                EndDomainAddresses.Value = await AddressesService.GetAddresses(EndAddressRequest.Value, RequestPriority.UserInitiated);
             }
         }
     }
