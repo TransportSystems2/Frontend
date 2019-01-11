@@ -3,4 +3,6 @@
     <string name="hello">Hello World, Click Me!</string>
     <string name="app_name">TransportSystems</string>
     <string name="app_message">App scaffolded with MvxScaffolding</string>
+    <string name="from">откуда</string>
+    <string name="to">куда</string>
 </resources>
