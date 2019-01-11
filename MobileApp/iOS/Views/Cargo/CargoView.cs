@@ -47,11 +47,8 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.Cargo
             set.Bind(weightPickerViewModel).For(p => p.ItemsSource).To(vm => vm.Weights);
             set.Bind(brandsPickerViewModel).For(p => p.SelectedItem).To(vm => vm.Brand);
             set.Bind(brandsPickerViewModel).For(p => p.ItemsSource).To(vm => vm.Brands);
-            set.Bind(TypeLabel).To(vm => vm.KindLabel);
             set.Bind(TypeTextField).To(vm => vm.Kind);
-            set.Bind(WeightLabel).To(vm => vm.WeightLabel);
             set.Bind(WeightTextField).To(vm => vm.Weight);
-            set.Bind(BrandLabel).To(vm => vm.BrandLabel);
             set.Bind(BrandTextField).To(vm => vm.Brand);
             set.Bind(NextButton).To(vm => vm.NextCommand);
             set.Apply();

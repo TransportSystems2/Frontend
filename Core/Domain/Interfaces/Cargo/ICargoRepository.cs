@@ -7,5 +7,7 @@ namespace TransportSystems.Frontend.Core.Domain.Interfaces.Cargo
     public interface ICargoRepository
     {
         Task<CargoCatalogItemsDM> GetAvailableParams(RequestPriority priority);
+
+        Task<bool> ValidateRegistrationNumber(string number, RequestPriority priority);
     }
 }
