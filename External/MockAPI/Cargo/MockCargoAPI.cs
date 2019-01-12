@@ -39,5 +39,10 @@ namespace TransportSystems.Frontend.External.MockAPI.Cargo
 
             return result;
         }
+
+        public Task<bool> ValidRegistrationNumber(string registrationNumber)
+        {
+            return Task.FromResult(true);
+        }
     }
 }

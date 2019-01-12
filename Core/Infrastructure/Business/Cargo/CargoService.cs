@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using TransportSystems.Frontend.Core.Domain.Core;
 using TransportSystems.Frontend.Core.Domain.Core.Cargo;
 using TransportSystems.Frontend.Core.Domain.Interfaces.Cargo;
@@ -19,6 +18,11 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.Cargo
         public Task<CargoCatalogItemsDM> GetAvailableParams(RequestPriority priority)
         {
             return CargoRepository.GetAvailableParams(priority);
+        }
+
+        public Task<bool> ValidateRegistrationNumber(string number, RequestPriority priority)
+        {
+            return CargoRepository.ValidateRegistrationNumber(number, priority);
         }
     }
 }
