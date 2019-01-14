@@ -141,6 +141,7 @@
     <Compile Include="Views\Settings\SettingsView.cs" />
     <Compile Include="Views\Cargo\CargoView.cs" />
     <Compile Include="Views\Addressess\AddressesView.cs" />
+    <Compile Include="Views\Booking\BookingView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -174,6 +175,7 @@
     <AndroidResource Include="Resources\values\dimens.xml" />
     <AndroidResource Include="Resources\layout\CargoView.axml" />
     <AndroidResource Include="Resources\layout\AddressessView.axml" />
+    <AndroidResource Include="Resources\layout\BookingView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -183,6 +185,7 @@
     <Folder Include="Views\Settings\" />
     <Folder Include="Views\Cargo\" />
     <Folder Include="Views\Addressess\" />
+    <Folder Include="Views\Booking\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

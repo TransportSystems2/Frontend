@@ -15,4 +15,11 @@
     <string name="ditch">в кювете</string>
     <string name="overturned">перевернут</string>
     <string name="comment">комментарий</string>
+    <string name="city">город</string>
+    <string name="comission_of_system">комиссия системы</string>
+    <string name="degree_of_dificulty">степень сложности</string>
+    <string name="feed_distance">до места погрузки</string>
+    <string name="total_distance">протяженность маршрута</string>
+    <string name="price">цена</string>
+    <string name="on">на</string>
 </resources>
