@@ -16,10 +16,6 @@ namespace TransportSystems.Frontend.MobileApp.Android.Views.Users
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.CustomerView);
-            //var phone = (EditText)FindViewById(Resource.Id.phone);
-            //phone.AddTextChangedListener(new PhoneNumberFormattingTextWatcher());
-            //var aditionalPhone = (EditText)FindViewById(Resource.Id.aditional_phone);
-            //aditionalPhone.AddTextChangedListener(new PhoneNumberFormattingTextWatcher());
         }
 
     }

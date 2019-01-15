@@ -5,6 +5,7 @@ using MvvmCross.Commands;
 using MvvmCross.Plugin.FieldBinding;
 using MvvmValidation;
 using TransportSystems.Frontend.App.Extensions;
+using TransportSystems.Frontend.Core.Domain.Core;
 using TransportSystems.Frontend.Core.Domain.Core.Booking;
 using TransportSystems.Frontend.Core.Services.Interfaces.Orders;
 
@@ -54,6 +55,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Customer
             var modelIsInflated = await InflateModel();
             if (modelIsInflated)
             {
+                await OrdersService.Create(Model, RequestPriority.UserInitiated);
             }
         }
 
