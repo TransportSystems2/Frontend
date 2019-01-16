@@ -14,7 +14,7 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.Users
             var set = this.CreateBindingSet<CustomerView, CustomerViewModel>();
             set.Bind(NameTextField).To(vm => vm.Name);
             set.Bind(PhoneTextField).To(vm => vm.Phone);
-            set.Bind(NextButton).To(vm => vm.RegisterCommand);
+            set.Bind(NextButton).To(vm => vm.NextCommand);
             set.Apply();
         }
     }

@@ -37,15 +37,6 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.Booking
             set.Bind(FeedDurationValueLabel).To(vm => vm.FeedDuration);
             set.Bind(TotalDistanceValueLabel).To(vm => vm.TotalDistance);
             set.Bind(TotalPriceValueLabel).To(vm => vm.TotalPrice);
-
-            set.Bind(DateLabel).To(vm => vm.DateLabel);
-            set.Bind(CityLabel).To(vm => vm.CityLabel);
-            set.Bind(ComissionLabel).To(vm => vm.ComissionLabel);
-            set.Bind(DegreeOfDifficultyLabel).To(vm => vm.DegreeOfDificultyLabel);
-            set.Bind(FeedDistanceLabel).To(vm => vm.FeedDistanceLabel);
-            set.Bind(TotalDistanceLabel).To(vm => vm.TotalDistanceLabel);
-            set.Bind(TotalDistanceLabel).To(vm => vm.TotalDistanceLabel);
-            set.Bind(TotalPriceLabel).To(vm => vm.TotalPriceLabel);
             set.Bind(NextButton).To(vm => vm.NextCommand);
             set.Apply();
         }
