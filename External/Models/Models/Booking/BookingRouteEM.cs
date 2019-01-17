@@ -1,4 +1,5 @@
-﻿using TransportSystems.Frontend.External.Models.Geo;
+﻿using System;
+using TransportSystems.Frontend.External.Models.Geo;
 using TransportSystems.Frontend.External.Models.Models.Billing;
 
 namespace TransportSystems.Frontend.External.Models.Models.Booking
@@ -16,5 +17,7 @@ namespace TransportSystems.Frontend.External.Models.Models.Booking
         public int FeedDuration { get; set; }
 
         public BillEM Bill { get; set; }
+
+        public TimeSpan AvgDeliveryTime { get; set; }
     }
 }

@@ -100,7 +100,8 @@ namespace TransportSystems.Frontend.App.ViewModels.Booking
                 Waypoints = Model.Waypoints,
                 Cargo = Model.Cargo,
                 Basket = Model.Basket,
-                BillInfo = route.Bill.Info
+                BillInfo = route.Bill.Info,
+                OrderTime = DateTime.Now.Add(route.AvgDeliveryTime)
             };
 
             await NavigationService.Navigate<CustomerViewModel, BookingDM>(booking);

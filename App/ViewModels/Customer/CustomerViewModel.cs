@@ -64,8 +64,6 @@ namespace TransportSystems.Frontend.App.ViewModels.Customer
             Model.Customer.FirstName = Name.Value;
             Model.Customer.PhoneNumber = Phone.Value;
 
-            Model.OrderTime = DateTime.Now;
-
             return Task.FromResult(true);
         }
 
