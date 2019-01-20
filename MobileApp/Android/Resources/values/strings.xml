@@ -27,6 +27,8 @@
     <string name="status">статус</string>
     <string name="client">клиент</string>
     <string name="phone">телефон</string>
+    <string name="hwo_to_ask">как обращаться</string>
+    <string name="aditional_phone">дополнительный телефон</string>
     <string name="cargo">груз</string>
     <string name="route">маршрут</string>
     <string name="prices">расценки</string>

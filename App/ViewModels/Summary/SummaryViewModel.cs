@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Commands;
 using MvvmCross.Plugin.FieldBinding;
+using TransportSystems.Frontend.Core.Domain.Core;
 using TransportSystems.Frontend.Core.Domain.Core.Booking;
 using TransportSystems.Frontend.Core.Domain.Core.Geo;
 using TransportSystems.Frontend.Core.Services.Interfaces.Orders;
@@ -13,6 +14,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Summary
     {
         public SummaryViewModel(IOrdersService ordersService)
         {
+            OrdersService = ordersService;
             AddOrderCommand = new MvxAsyncCommand(AddOrder);
             CancelCommand = new MvxAsyncCommand(Cancel);
         }
@@ -50,6 +52,8 @@ namespace TransportSystems.Frontend.App.ViewModels.Summary
         public readonly ICommand AddOrderCommand;
         public readonly ICommand CancelCommand;
 
+        protected IOrdersService OrdersService { get; }
+
         public override void Prepare(BookingDM parameter)
         {
             base.Prepare(parameter);
@@ -59,6 +63,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Summary
             InitCargo();
             InitBasket();
             InitAddressess();
+            InitBooking();
         }
 
         private void InitOrder()
@@ -69,8 +74,8 @@ namespace TransportSystems.Frontend.App.ViewModels.Summary
 
         private void InitCustomer()
         {
-            //CustomerName.Value = $"{Model.Customer.FirstName} {Model.Customer.LastName}";
-            //CustomerPhone.Value = Model.Customer.PhoneNumber;
+            CustomerName.Value = $"{Model.Customer.FirstName} {Model.Customer.LastName}";
+            CustomerPhone.Value = Model.Customer.PhoneNumber;
         }
 
         private void InitCargo()
@@ -116,9 +121,10 @@ namespace TransportSystems.Frontend.App.ViewModels.Summary
             DegreeOfDificulty.Value = Model.BillInfo.DegreeOfDifficulty;
         }
 
-        private Task AddOrder()
+        private async Task AddOrder()
         {
-            return Task.CompletedTask;
+            await OrdersService.Create(Model, RequestPriority.UserInitiated);
+            await NavigationService.Close(this);
         }
 
         private async Task Cancel()
