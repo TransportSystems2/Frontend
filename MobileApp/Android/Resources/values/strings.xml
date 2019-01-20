@@ -22,4 +22,15 @@
     <string name="total_distance">протяженность маршрута</string>
     <string name="price">цена</string>
     <string name="on">на</string>
+    <string name="create">создать</string>
+    <string name="order">заказ</string>
+    <string name="status">статус</string>
+    <string name="client">клиент</string>
+    <string name="phone">телефон</string>
+    <string name="cargo">груз</string>
+    <string name="route">маршрут</string>
+    <string name="prices">расценки</string>
+    <string name="garage">гараж</string>
+    <string name="cancel">отмена</string>
+    <string name="add_order">добавить заказ</string>
 </resources>

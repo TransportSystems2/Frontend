@@ -29,6 +29,7 @@
     <Folder Include="Models\Routing\" />
     <Folder Include="ViewModels\Customer\" />
     <Folder Include="Extensions\" />
+    <Folder Include="ViewModels\Summary\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
