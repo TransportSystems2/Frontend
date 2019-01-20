@@ -45,7 +45,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Customer
                 PhoneNumber = Phone.Value
             };
             Model.Customer = customer;
-            Model.OrderTime = DateTime.Now;
+            Model.TimeOfDelivery = DateTime.Now;
 
             await OrdersService.Create(Model, RequestPriority.UserInitiated);
         }
