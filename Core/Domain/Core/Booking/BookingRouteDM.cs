@@ -1,4 +1,5 @@
-﻿using TransportSystems.Frontend.Core.Domain.Core.Billing;
+﻿using System;
+using TransportSystems.Frontend.Core.Domain.Core.Billing;
 using TransportSystems.Frontend.Core.Domain.Core.Geo;
 
 namespace TransportSystems.Frontend.Core.Domain.Core.Booking
@@ -16,5 +17,7 @@ namespace TransportSystems.Frontend.Core.Domain.Core.Booking
         public int FeedDuration { get; set; }
 
         public BillDM Bill { get; set; }
+
+        public TimeSpan AvgDeliveryTime { get; set; }
     }
 }

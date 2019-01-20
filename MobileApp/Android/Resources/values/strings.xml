@@ -21,5 +21,7 @@
     <string name="feed_distance">до места погрузки</string>
     <string name="total_distance">протяженность маршрута</string>
     <string name="price">цена</string>
-    <string name="on">на</string>
+    <string name="hwo_to_ask">как обращаться</string>
+    <string name="phone">телефон</string>
+    <string name="aditional_phone">дополнительный телефон</string>
 </resources>

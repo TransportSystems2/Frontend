@@ -7,6 +7,7 @@ using MvvmCross.Plugin.FieldBinding;
 using TransportSystems.Frontend.App.ViewModels.Customer;
 using TransportSystems.Frontend.Core.Domain.Core;
 using TransportSystems.Frontend.Core.Domain.Core.Booking;
+using TransportSystems.Frontend.Core.Domain.Core.Users;
 using TransportSystems.Frontend.Core.Services.Interfaces.Booking;
 
 namespace TransportSystems.Frontend.App.ViewModels.Booking
@@ -94,11 +95,13 @@ namespace TransportSystems.Frontend.App.ViewModels.Booking
             var route = BookingResponse.Routes.Find(r => r.Title.Equals(City.Value));
             var booking = new BookingDM
             {
+                Customer = new CustomerDM(),
                 RootAddress = route.RootAddress,
                 Waypoints = Model.Waypoints,
                 Cargo = Model.Cargo,
                 Basket = Model.Basket,
                 BillInfo = route.Bill.Info,
+                OrderTime = DateTime.Now.Add(route.AvgDeliveryTime)
             };
 
             await NavigationService.Navigate<CustomerViewModel, BookingDM>(booking);
