@@ -1,8 +1,6 @@
 ﻿
 using Android.App;
 using Android.OS;
-using Android.Telephony;
-using Android.Widget;
 using MvvmCross.Platforms.Android.Views;
 using TransportSystems.Frontend.App.ViewModels.Customer;
 

@@ -13,7 +13,7 @@ namespace TransportSystems.Frontend.Core.Domain.Core.Booking
 
         public WaypointsDM Waypoints { get; set; }
 
-        public DateTime OrderTime { get; set; }
+        public DateTime TimeOfDelivery { get; set; }
 
         public CustomerDM Customer { get; set; }
 

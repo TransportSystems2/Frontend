@@ -5,17 +5,15 @@ using MvvmCross.Commands;
 using MvvmCross.Plugin.FieldBinding;
 using MvvmValidation;
 using TransportSystems.Frontend.App.Extensions;
-using TransportSystems.Frontend.Core.Domain.Core;
+using TransportSystems.Frontend.App.ViewModels.Summary;
 using TransportSystems.Frontend.Core.Domain.Core.Booking;
-using TransportSystems.Frontend.Core.Services.Interfaces.Orders;
 
 namespace TransportSystems.Frontend.App.ViewModels.Customer
 {
     public class CustomerViewModel : BaseViewModel<BookingDM>
     {
-        public CustomerViewModel(IOrdersService ordersService)
+        public CustomerViewModel()
         {
-            OrdersService = ordersService;
             Validator = new ValidationHelper();
             NextCommand = new MvxAsyncCommand(NavigateToSummaryView);
         }
@@ -31,8 +29,6 @@ namespace TransportSystems.Frontend.App.ViewModels.Customer
         public readonly INC<Dictionary<string, string>> Errors = new NC<Dictionary<string, string>>();
 
         protected ValidationHelper Validator { get; set; }
-
-        protected IOrdersService OrdersService { get; }
 
         public IMvxCommand NextCommand;
 
@@ -55,7 +51,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Customer
             var modelIsInflated = await InflateModel();
             if (modelIsInflated)
             {
-                await OrdersService.Create(Model, RequestPriority.UserInitiated);
+                await NavigationService.Navigate<SummaryViewModel, BookingDM>(Model);
             }
         }
 
