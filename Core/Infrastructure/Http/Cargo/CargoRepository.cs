@@ -26,5 +26,12 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Http.Cargo
 
             return MappingService.Map<CargoCatalogItemsDM>(externalParams);
         }
+
+        public Task<bool> ValidateRegistrationNumber(string number, RequestPriority priority)
+        {
+            var api = GetApi(priority);
+
+            return api.ValidRegistrationNumber(number);
+        }
     }
 }
