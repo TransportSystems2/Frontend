@@ -67,8 +67,8 @@ namespace TransportSystems.Frontend.App
 {
     public class Application : MvxApplication
     {
-        public static string APIURL = "http://10.0.2.2:5000";
-        public static string IdentityServerURL = "http://10.0.2.2:54420";
+        public static string APIURL = "http://host.docker.internal:82";
+        public static string IdentityServerURL = "http://host.docker.internal:82";
 
         private string GrandType = "phone_number_token";
         private const string ClientId = "phone_number_authentication";
@@ -157,7 +157,7 @@ namespace TransportSystems.Frontend.App
                 cfg.AddProfile<AppProfile>();
             });
 
-            Mvx.IoCProvider.RegisterType<IMapper>(() => Mapper.Instance);
+            Mvx.IoCProvider.RegisterType(() => Mapper.Instance);
         }
 
         protected HttpMessageHandler GetAuthenticatedMessageHandler()

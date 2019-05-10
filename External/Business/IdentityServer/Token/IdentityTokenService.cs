@@ -32,14 +32,12 @@ namespace TransportSystems.Frontend.External.Business.IdentityServer.Token
 
             using (var client = new HttpClient())
             {
-                var discovery = await DiscoveryService.GetDiscovery();
-                var uri = Path.Combine(discovery.Issuer, "identity/getcode");
-
                 var phoneJsonModel = $"'phone': {phone}";
                 var json = @"{" + phoneJsonModel + "}";
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var response = await client.PostAsync(uri, content).ConfigureAwait(false);
+                var discovery = await DiscoveryService.GetDiscovery();
+                var response = await client.PostAsync(discovery.SendCodeEndpoint, content).ConfigureAwait(false);
 
                 result = response.StatusCode == HttpStatusCode.Accepted;
             }
