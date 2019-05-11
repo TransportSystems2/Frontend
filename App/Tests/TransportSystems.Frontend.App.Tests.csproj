@@ -19,4 +19,14 @@
   <ItemGroup>
     <None Remove=".DS_Store" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\SignUp\" />
+    <Folder Include="ViewModels\SignUp\Dispatcher\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Domain\Interfaces\TransportSystems.Frontend.Core.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\src\TransportSystems.Frontend.App.csproj" />
+    <ProjectReference Include="..\..\Core\Domain\Core\TransportSystems.Frontend.Core.Domain.Core.csproj" />
+  </ItemGroup>
 </Project>
