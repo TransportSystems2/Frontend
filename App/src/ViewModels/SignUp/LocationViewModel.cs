@@ -1,166 +1,71 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using MvvmCross.Commands;
 using MvvmCross.Plugin.FieldBinding;
 using TransportSystems.Frontend.Core.Domain.Core;
-using TransportSystems.Frontend.Core.Services.Interfaces.Garages;
-using TransportSystems.Frontend.Core.Services.Interfaces.SignUp;
+using TransportSystems.Frontend.Core.Domain.Core.Geo;
+using TransportSystems.Frontend.Core.Domain.Core.SignUp;
+using TransportSystems.Frontend.Core.Services.Interfaces.Address;
 
 namespace TransportSystems.Frontend.App.ViewModels.SignUp
 {
-    public class LocationViewModel<T> : BaseViewModel<T> where T : class
+    public class LocationViewModel : BaseViewModel<CompanyApplicationDM>
     {
-        private const string Country = "Россия";
-
-        public LocationViewModel(ISignUpService signUpService, IGarageService garageService)
+        public LocationViewModel(IAddressService addressesService)
         {
-            SignUpService = signUpService;
-            GarageService = garageService;
+            AddressesService = addressesService;
 
-            RegisterCommand = new MvxAsyncCommand(Register);
+            NextCommand = new MvxAsyncCommand(Next);
         }
 
-        public readonly INC<ICollection<string>> Provincies = new NC<ICollection<string>>();
+        public readonly INC<string> AddressRequest = new NC<string>();
 
-        public readonly INC<ICollection<string>> Cities = new NC<ICollection<string>>();
+        public readonly INC<ICollection<AddressDM>> AddressesResponse = new NC<ICollection<AddressDM>>();
 
-        public readonly INC<ICollection<string>> Regions = new NC<ICollection<string>>();
+        public readonly INC<AddressDM> SelectedAddress = new NC<AddressDM>();
 
-        public readonly INC<string> ProvinceLabel = new NC<string>();
-
-        public readonly INC<string> Province = new NC<string>();
-
-        public readonly INC<string> CityLabel = new NC<string>();
-
-        public readonly INC<string> City = new NC<string>();
-
-        public readonly INC<string> RegionLabel = new NC<string>();
-
-        public readonly INC<string> Region = new NC<string>();
-
-        public readonly INC<string> RegisterButtonText = new NC<string>();
-
-        public IMvxCommand RegisterCommand { get; private set; }
-
-        protected ISignUpService SignUpService { get; }
-
-        protected IGarageService GarageService { get; }
-
-        public override Task Initialize()
-        {
-            Province.Changed += HandleProvinceChanged;
-            City.Changed += HandleCityChanged;
-
-            return base.Initialize();
-        }
+        public IMvxCommand NextCommand { get; private set; }
 
         public override void Prepare()
         {
-            Title.Value = "Местоположение";
-
-            ProvinceLabel.Value = "Область";
-            CityLabel.Value = "Город";
-            RegionLabel.Value = "Регион";
-            RegisterButtonText.Value = "Зарегистрироваться";
-
             base.Prepare();
+
+#if DEBUG
+            AddressRequest.Value = "9 мая рыбинск";
+#endif
         }
 
-        public async override void Start()
+        public override void ViewAppearing()
         {
-            base.Start();
+            base.ViewAppearing();
 
-            await GetAvailableProvinces();
+            AddressRequest.Changed += HandleFromAddressChanged;
         }
 
-        protected virtual Task Register()
+        public override void ViewDisappearing()
         {
-            return Task.CompletedTask;
+            AddressRequest.Changed -= HandleFromAddressChanged;
+
+            base.ViewDisappearing();
         }
 
-        private async Task GetAvailableProvinces()
+        protected IAddressService AddressesService { get; }
+
+        protected async Task Next()
         {
-            ICollection<string> provinces = null;
-            try
-            {
-                provinces = await GarageService.GetAvailableProvinces(Country, RequestPriority.UserInitiated);
-            }
-            catch (Exception e)
-            {
+            Model.GarageAddress = SelectedAddress.Value;
 
-            }
-
-            if (provinces == null || provinces.Count == 0)
-            {
-                return;
-            }
-
-            Provincies.Value = provinces;
-            Province.Value = provinces.FirstOrDefault();
+            await NavigationService.Navigate<VehicleViewModel, CompanyApplicationDM>(Model);
         }
 
-        private async Task GetAvailableCities()
+        private async void HandleFromAddressChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Province.Value))
+            SelectedAddress.Value = null;
+            if (AddressRequest.Value.Length > 3)
             {
-                return;
+                AddressesResponse.Value = await AddressesService.GetAddresses(AddressRequest.Value, RequestPriority.UserInitiated);
             }
-
-            ICollection<string> cities = null;
-            try
-            {
-                cities = await GarageService.GetAvailableLocalities(Country, Province.Value, RequestPriority.UserInitiated);
-            }
-            catch (Exception e)
-            {
-
-            }
-
-            if (cities == null || cities.Count == 0)
-            {
-                return;
-            }
-
-            Cities.Value = cities;
-            City.Value = cities.FirstOrDefault();
-        }
-
-        private async Task GetAvailableRegions()
-        {
-            if (string.IsNullOrEmpty(Province.Value) || string.IsNullOrEmpty(City.Value))
-            {
-                return;
-            }
-
-            ICollection<string> regions = null;
-            try
-            {
-                regions = await GarageService.GetAvailableDistricts(Country, Province.Value, City.Value, RequestPriority.UserInitiated);
-            }
-            catch (Exception e)
-            {
-
-            }
-
-            if (regions == null || regions.Count == 0)
-            {
-                return;
-            }
-
-            Regions.Value = regions;
-            Region.Value = regions.FirstOrDefault();
-        }
-
-        private async void HandleProvinceChanged(object sender, EventArgs e)
-        {
-            await GetAvailableCities();
-        }
-
-        private async void HandleCityChanged(object sender, EventArgs e)
-        {
-            await GetAvailableRegions();
         }
     }
 }

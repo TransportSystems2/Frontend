@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Moq;
 using MvvmCross.Navigation;
 using MvvmCross.Tests;
 using NUnit.Framework;
-using TransportSystems.Frontend.App.ViewModels.SignUp.Dispatcher.Garages;
+using TransportSystems.Frontend.App.ViewModels.SignUp;
 using TransportSystems.Frontend.Core.Domain.Core;
 using TransportSystems.Frontend.Core.Domain.Core.Geo;
 using TransportSystems.Frontend.Core.Services.Interfaces.Address;

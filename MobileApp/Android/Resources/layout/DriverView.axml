@@ -5,7 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Medium Text"
+        android:text="@string/phone_number"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phoneNumberLabel"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        local:MvxBind="Enabled !DriveMySelf" />
+    <EditText
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstNameTextField"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        local:MvxBind="Text PhoneNumber; Enabled !DriveMySelf" />
+    <TextView
+        android:text="@string/first_name"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +32,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        local:MvxBind="Text FirstNameLabel" />
+        local:MvxBind="Enabled !DriveMySelf" />
     <EditText
         android:inputType="textPersonName"
         android:layout_width="match_parent"
@@ -22,9 +41,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        local:MvxBind="Text FirstName" />
+        local:MvxBind="Text FirstName; Enabled !DriveMySelf" />
     <TextView
-        android:text="Medium Text"
+        android:text="@string/last_name"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +51,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        local:MvxBind="Text LastNameLabel" />
+        local:MvxBind="Enabled !DriveMySelf" />
     <EditText
         android:inputType="textPersonName"
         android:layout_width="match_parent"
@@ -41,14 +60,20 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        local:MvxBind="Text LastName" />
+        local:MvxBind="Text LastName; Enabled !DriveMySelf" />
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drive_my_self"
+        local:MvxBind="Checked DriveMySelf"/>
     <Button
-        android:text="Button"
+        android:id="@+id/nextButton"
+        android:text="@string/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/nextButton"
-        local:MvxBind="Click NextCommand; Text NextButtonText"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        local:MvxBind="Click NextCommand" />
 </LinearLayout>

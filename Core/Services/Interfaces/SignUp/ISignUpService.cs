@@ -6,8 +6,6 @@ namespace TransportSystems.Frontend.Core.Services.Interfaces.SignUp
 {
     public interface ISignUpService
     {
-        Task RegisterDispatcher(DispatcherCompanyDM dispatcherCompany, RequestPriority priority);
-
-        Task RegisterDriver(DriverCompanyDM driverCompany, RequestPriority priority);
+        Task Register(CompanyApplicationDM companyApplication, RequestPriority priority);
     }
 }

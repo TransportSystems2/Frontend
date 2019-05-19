@@ -16,19 +16,11 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Http.SignUp
         {
         }
 
-        public Task RegisterDispatcher(DispatcherCompanyDM dispatcherCompany, RequestPriority priority)
+        public Task Register(CompanyApplicationDM companyApplication, RequestPriority priority)
         {
-            var company = Mapper.Map<DispatcherCompanyEM>(dispatcherCompany);
+            var companyApplicationEM = Mapper.Map<CompanyApplicationEM>(companyApplication);
             var api = GetApi(priority);
-            return api.RegisterDispatcher(company);
-        }
-
-        public Task RegisterDriver(DriverCompanyDM driverCompany, RequestPriority priority)
-        {
-            var company = Mapper.Map<DriverCompanyEM>(driverCompany);
-            var api = GetApi(priority);
-
-            return api.RegisterDriver(company);
+            return api.Register(companyApplicationEM);
         }
     }
 }

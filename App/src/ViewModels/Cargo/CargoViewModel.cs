@@ -63,7 +63,6 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 
         public override void Prepare()
         {
-            Title.Value = "Груз";
             LockedWheelsList.Value = new List<int> { 0, 1, 2, 3, 4};
             LockedWheels.Value = 0;
 

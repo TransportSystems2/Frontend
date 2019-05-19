@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Medium Text"
+        android:text="@string/first_name"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/firstNameLabel"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        local:MvxBind="Text FirstNameLabel" />
+        android:layout_marginRight="16dp"/>
     <EditText
         android:inputType="textPersonName"
         android:layout_width="match_parent"
@@ -22,17 +22,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        local:MvxBind="Text FirstName" />
+        local:MvxBind="Text FirstName"/>
     <TextView
-        android:text="Medium Text"
+        android:text="@string/last_name"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/secondNameLabel"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        local:MvxBind="Text LastNameLabel" />
+        android:layout_marginRight="16dp"/>
     <EditText
         android:inputType="textPersonName"
         android:layout_width="match_parent"
@@ -41,14 +40,14 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        local:MvxBind="Text LastName" />
+        local:MvxBind="Text LastName"/>
     <Button
         android:text="Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/nextButton"
-        local:MvxBind="Click NextCommand; Text NextButtonText"
+        local:MvxBind="Click NextCommand"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"/>
 </LinearLayout>

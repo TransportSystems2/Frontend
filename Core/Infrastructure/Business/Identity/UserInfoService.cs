@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using TransportSystems.Frontend.Core.Domain.Core.Identity;
@@ -40,6 +41,19 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.Identity
             return userInfo;
         }
 
+        public string GetPhoneNumber()
+        {
+            if (!UserInfoSettingsService.ExistUserInfo())
+            {
+                throw new Exception("not exist user info. Use UpdateUserInfo()");
+            }
+
+            var userInfo = UserInfoSettingsService.GetUserInfo();
+            var phoneNumberClaim = userInfo.Claims.FirstOrDefault(c => c.Type.Equals("phone_number"));
+
+            return phoneNumberClaim.Value;
+        }
+
         public bool IsNewUser()
         {
             var isModerator = IsInRole(UserRoles.Moderator);
@@ -51,15 +65,14 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.Identity
 
         public bool IsInRole(string role)
         {
-            bool result = false;
-            if (UserInfoSettingsService.ExistUserInfo())
+            if (!UserInfoSettingsService.ExistUserInfo())
             {
-                var userInfo = UserInfoSettingsService.GetUserInfo();
-                result = IsInRole(userInfo.Claims, role);
-
+                throw new Exception("not exist user info. Use UpdateUserInfo()");
             }
 
-            return result;
+            var userInfo = UserInfoSettingsService.GetUserInfo();
+
+            return IsInRole(userInfo.Claims, role);
         }
 
         private bool IsInRole(List<Claim> userInfo, string role)

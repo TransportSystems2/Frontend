@@ -1,10 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using MvvmCross.Commands;
 using MvvmCross.Plugin.FieldBinding;
 using TransportSystems.Frontend.App.Models.SignIn;
 using TransportSystems.Frontend.App.ViewModels.Home;
 using TransportSystems.Frontend.App.ViewModels.SignUp;
+using TransportSystems.Frontend.Core.Domain.Core.SignUp;
 using TransportSystems.Frontend.Core.Services.Interfaces.Identity;
 using TransportSystems.Frontend.Core.Services.Interfaces.Signin;
 
@@ -47,7 +47,7 @@ namespace TransportSystems.Frontend.App.ViewModels.SignIn
             var success = await SignInService.AuthAsync(PhoneNumber.Value, Code.Value);
             if (!success)
             {
-                // we should say verification code is failed
+                // should say verification code is failed
                 return;
             }
 
@@ -55,7 +55,7 @@ namespace TransportSystems.Frontend.App.ViewModels.SignIn
 
             if (UserInfoService.IsNewUser())
             {
-                await NavigationService.Navigate<UserTypeSelectorViewModel>();
+                await NavigationService.Navigate<DispatcherViewModel, CompanyApplicationDM>(new CompanyApplicationDM());
             }
             else
             {

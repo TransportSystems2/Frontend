@@ -15,14 +15,9 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.SignUp
 
         protected ISignUpRepository Repository { get; }
 
-        public Task RegisterDispatcher(DispatcherCompanyDM dispatcherCompany, RequestPriority priority)
+        public Task Register(CompanyApplicationDM companyApplication, RequestPriority priority)
         {
-            return Repository.RegisterDispatcher(dispatcherCompany, priority);
-        }
-
-        public Task RegisterDriver(DriverCompanyDM driverCompany, RequestPriority priority)
-        {
-            return Repository.RegisterDriver(driverCompany, priority);
+            return Repository.Register(companyApplication, priority);
         }
     }
 }

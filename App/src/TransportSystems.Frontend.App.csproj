@@ -12,8 +12,6 @@
     <Folder Include="Utils\" />
     <Folder Include="Models\SignUp\" />
     <Folder Include="ViewModels\SignUp\" />
-    <Folder Include="ViewModels\SignUp\Dispatcher\" />
-    <Folder Include="ViewModels\SignUp\Driver\" />
     <Folder Include="Models\Geo\" />
     <Folder Include="Models\SignUp\" />
     <Folder Include="Models\Transport\" />
@@ -29,7 +27,6 @@
     <Folder Include="Models\Routing\" />
     <Folder Include="ViewModels\Customer\" />
     <Folder Include="Extensions\" />
-    <Folder Include="ViewModels\SignUp\Dispatcher\Garages\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
