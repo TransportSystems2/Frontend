@@ -30,6 +30,7 @@
     <Folder Include="ViewModels\Customer\" />
     <Folder Include="Extensions\" />
     <Folder Include="ViewModels\Summary\" />
+    <Folder Include="ViewModels\SignUp\Dispatcher\Garages\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
@@ -50,14 +51,12 @@
     <Compile Remove="Utils\CustomJsonConvert.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Services\Interfaces\TransportSystems.Frontend.Core.Services.Interfaces.csproj" />
-    <ProjectReference Include="..\Core\Infrastructure\Business\TransportSystems.Frontend.Core.Infrastructure.Business.csproj" />
-    <ProjectReference Include="..\Core\Domain\Interfaces\TransportSystems.Frontend.Core.Domain.Interfaces.csproj" />
-    <ProjectReference Include="..\Core\Infrastructure\Settings\TransportSystems.Frontend.Core.Infrastructure.Settings.csproj" />
-    <ProjectReference Include="..\Core\Infrastructure\Http\TransportSystems.Frontend.Core.Infrastructure.Http.csproj" />
-    <ProjectReference Include="..\External\Interfaces\TransportSystems.Frontend.External.Interfaces.csproj" />
-    <ProjectReference Include="..\External\Models\TransportSystems.Frontend.External.Models.csproj" />
-    <ProjectReference Include="..\Extensions\TransportSystems.Frondend.Extensions.csproj" />
-    <ProjectReference Include="..\External\Business\TransportSystems.Frontend.External.Business.csproj" />
+    <ProjectReference Include="..\..\Utils\src\TransportSystems.Frontend.Utils.csproj" />
+    <ProjectReference Include="..\..\Core\Domain\Interfaces\TransportSystems.Frontend.Core.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Core\Infrastructure\Business\TransportSystems.Frontend.Core.Infrastructure.Business.csproj" />
+    <ProjectReference Include="..\..\Core\Infrastructure\Http\TransportSystems.Frontend.Core.Infrastructure.Http.csproj" />
+    <ProjectReference Include="..\..\Core\Infrastructure\Settings\TransportSystems.Frontend.Core.Infrastructure.Settings.csproj" />
+    <ProjectReference Include="..\..\External\Business\TransportSystems.Frontend.External.Business.csproj" />
+    <ProjectReference Include="..\..\Extensions\TransportSystems.Frondend.Extensions.csproj" />
   </ItemGroup>
 </Project>

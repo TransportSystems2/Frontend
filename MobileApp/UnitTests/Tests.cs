@@ -26,7 +26,6 @@ namespace TransportSystems.Frontend.MobileApp.UnitTests.UI
         [Test]
         public void AppLaunches()
         {
-            app.Screenshot("First screen.");
         }
     }
 }

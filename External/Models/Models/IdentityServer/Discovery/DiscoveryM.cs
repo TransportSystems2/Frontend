@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 
 namespace TransportSystems.Frontend.External.Models.Models.IdentityServer.Discovery
 {
@@ -9,6 +10,8 @@ namespace TransportSystems.Frontend.External.Models.Models.IdentityServer.Discov
         public string JwksUri { get; set; }
 
         public string AuthorizeEndpoint { get; set; }
+
+        public string SendCodeEndpoint => Path.Combine(Issuer, "identity/code/send");
 
         public string TokenEndpoint { get; set; }
 

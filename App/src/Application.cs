@@ -67,8 +67,8 @@ namespace TransportSystems.Frontend.App
 {
     public class Application : MvxApplication
     {
-        public static string APIURL = "http://68.183.213.218/";
-        public static string IdentityServerURL = "http://68.183.213.218:82/";
+        public static string APIURL = "http://host.docker.internal:82";
+        public static string IdentityServerURL = "http://host.docker.internal:82";
 
         private const string GrandType = "phone_number_token";
         private const string ClientId = "phone_number_authentication";

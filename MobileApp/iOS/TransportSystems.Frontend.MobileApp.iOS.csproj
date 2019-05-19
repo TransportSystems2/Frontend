@@ -243,12 +243,6 @@
     <AndroidResource Include="UserTypeSelectorView.axml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\App\TransportSystems.Frontend.App.csproj">
-      <Project>{6EBA7717-CCCD-4861-9508-087618EF5082}</Project>
-      <Name>TransportSystems.Frontend.App</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
       <Version>7.0.1</Version>
     </PackageReference>
@@ -283,6 +277,12 @@
     <PackageReference Include="System.Reflection.Emit" Version="4.3.0">
       <ExcludeAssets>all</ExcludeAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\App\src\TransportSystems.Frontend.App.csproj">
+      <Project>{4A215EA6-B735-4C2D-BA15-11E6F34CFFF4}</Project>
+      <Name>TransportSystems.Frontend.App</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 
