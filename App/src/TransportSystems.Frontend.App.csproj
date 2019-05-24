@@ -29,6 +29,7 @@
     <Folder Include="Models\Routing\" />
     <Folder Include="ViewModels\Customer\" />
     <Folder Include="Extensions\" />
+    <Folder Include="ViewModels\Summary\" />
     <Folder Include="ViewModels\SignUp\Dispatcher\Garages\" />
   </ItemGroup>
   <ItemGroup>
