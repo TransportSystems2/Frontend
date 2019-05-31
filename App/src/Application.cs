@@ -12,6 +12,7 @@ using TransportSystems.Frontend.Core.Domain.Interfaces.Booking;
 using TransportSystems.Frontend.Core.Domain.Interfaces.Cargo;
 using TransportSystems.Frontend.Core.Domain.Interfaces.Garages;
 using TransportSystems.Frontend.Core.Domain.Interfaces.Identity;
+using TransportSystems.Frontend.Core.Domain.Interfaces.Orders;
 using TransportSystems.Frontend.Core.Domain.Interfaces.Settings;
 using TransportSystems.Frontend.Core.Domain.Interfaces.SignUp;
 using TransportSystems.Frontend.Core.Domain.Interfaces.Transport;
@@ -21,6 +22,7 @@ using TransportSystems.Frontend.Core.Infrastructure.Business.Booking;
 using TransportSystems.Frontend.Core.Infrastructure.Business.Cargo;
 using TransportSystems.Frontend.Core.Infrastructure.Business.Garages;
 using TransportSystems.Frontend.Core.Infrastructure.Business.Identity;
+using TransportSystems.Frontend.Core.Infrastructure.Business.Orders;
 using TransportSystems.Frontend.Core.Infrastructure.Business.Settings;
 using TransportSystems.Frontend.Core.Infrastructure.Business.Signin;
 using TransportSystems.Frontend.Core.Infrastructure.Business.SignUp;
@@ -31,6 +33,7 @@ using TransportSystems.Frontend.Core.Infrastructure.Http.Booking;
 using TransportSystems.Frontend.Core.Infrastructure.Http.Cargo;
 using TransportSystems.Frontend.Core.Infrastructure.Http.Garages;
 using TransportSystems.Frontend.Core.Infrastructure.Http.Identity;
+using TransportSystems.Frontend.Core.Infrastructure.Http.Orders;
 using TransportSystems.Frontend.Core.Infrastructure.Http.SignUp;
 using TransportSystems.Frontend.Core.Infrastructure.Http.Transport;
 using TransportSystems.Frontend.Core.Infrastructure.Settings;
@@ -39,6 +42,7 @@ using TransportSystems.Frontend.Core.Services.Interfaces.Booking;
 using TransportSystems.Frontend.Core.Services.Interfaces.Cargo;
 using TransportSystems.Frontend.Core.Services.Interfaces.Garages;
 using TransportSystems.Frontend.Core.Services.Interfaces.Identity;
+using TransportSystems.Frontend.Core.Services.Interfaces.Orders;
 using TransportSystems.Frontend.Core.Services.Interfaces.Settings;
 using TransportSystems.Frontend.Core.Services.Interfaces.Signin;
 using TransportSystems.Frontend.Core.Services.Interfaces.SignUp;
@@ -58,10 +62,6 @@ using TransportSystems.Frontend.External.Interfaces.IdentityServer.Introspection
 using TransportSystems.Frontend.External.Interfaces.IdentityServer.SignOut;
 using TransportSystems.Frontend.External.Interfaces.IdentityServer.Token;
 using TransportSystems.Frontend.External.Interfaces.IdentityServer.UserInfo;
-using TransportSystems.Frontend.Core.Domain.Interfaces.Orders;
-using TransportSystems.Frontend.Core.Infrastructure.Http.Orders;
-using TransportSystems.Frontend.Core.Services.Interfaces.Orders;
-using TransportSystems.Frontend.Core.Infrastructure.Business.Orders;
 
 namespace TransportSystems.Frontend.App
 {
@@ -70,7 +70,7 @@ namespace TransportSystems.Frontend.App
         public static string APIURL = "http://host.docker.internal:82";
         public static string IdentityServerURL = "http://host.docker.internal:82";
 
-        private string GrandType = "phone_number_token";
+        private const string GrandType = "phone_number_token";
         private const string ClientId = "phone_number_authentication";
         private const string ClientSecret = "secret";
         private const string ApiName = "TSAPI";

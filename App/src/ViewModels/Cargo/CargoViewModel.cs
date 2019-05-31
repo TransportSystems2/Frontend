@@ -144,6 +144,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
             Model.Cargo.KindCatalogItemId = kind.Id;
             Model.Cargo.WeightCatalogItemId = weight.Id;
             Model.Cargo.BrandCatalogItemId = brand.Id;
+            Model.Cargo.RegistrationNumber = RegistrationNumber.Value;
 
             Model.Cargo.Comment = Comment.Value;
 
