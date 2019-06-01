@@ -6,7 +6,7 @@ namespace TransportSystems.Frontend.External.Interfaces.Booking
 {
     public interface IBookingAPI
     {
-        [Post("/api/booking")]
+        [Post("/api/booking/calculate")]
         [Headers("Authorization: Bearer")]
         Task<BookingResponseEM> Calculate(BookingRequestEM request);
     }

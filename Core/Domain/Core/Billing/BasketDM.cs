@@ -1,11 +1,13 @@
-﻿namespace TransportSystems.Frontend.Core.Domain.Core.Billing
+﻿using DotNetDistance;
+
+namespace TransportSystems.Frontend.Core.Domain.Core.Billing
 {
     public class BasketDM
     {
         /// <summary>
         /// Протяженость маршрута (км)
         /// </summary>
-        public int KmValue { get; set; }
+        public Distance Distance { get; set; }
 
         /// <summary>
         /// Требуется погрузка

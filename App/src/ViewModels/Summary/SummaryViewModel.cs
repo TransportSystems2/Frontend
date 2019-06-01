@@ -89,10 +89,10 @@ namespace TransportSystems.Frontend.App.ViewModels.Summary
 
         private void InitBasket()
         {
-            LockedWheels.Value = Model.Basket.LockedWheelsValue;
-            LockedSteering.Value = Model.Basket.LockedSteeringValue == 1 ? "да" : "нет";
-            Ditch.Value = Model.Basket.DitchValue == 1 ? "да" : "нет";
-            Overturned.Value = Model.Basket.OverturnedValue == 1 ? "да" : "нет";
+            LockedWheels.Value = Model.Bill.Basket.LockedWheelsValue;
+            LockedSteering.Value = Model.Bill.Basket.LockedSteeringValue == 1 ? "да" : "нет";
+            Ditch.Value = Model.Bill.Basket.DitchValue == 1 ? "да" : "нет";
+            Overturned.Value = Model.Bill.Basket.OverturnedValue == 1 ? "да" : "нет";
         }
 
         private void InitAddressess()
@@ -115,10 +115,10 @@ namespace TransportSystems.Frontend.App.ViewModels.Summary
 
         private void InitBooking()
         {
-            City.Value = Model.RootAddress.Locality;
-            Garage.Value = Model.RootAddress.FormattedText;
-            Comission.Value = Model.BillInfo.CommissionPercentage;
-            DegreeOfDificulty.Value = Model.BillInfo.DegreeOfDifficulty;
+            City.Value = Model.MarketId.ToString();
+            Garage.Value = Model.MarketId.ToString();
+            Comission.Value = Model.Bill.Info.CommissionPercentage;
+            DegreeOfDificulty.Value = Model.Bill.Info.DegreeOfDifficulty;
         }
 
         private async Task AddOrder()

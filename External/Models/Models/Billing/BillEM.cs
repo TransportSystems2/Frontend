@@ -11,7 +11,9 @@ namespace TransportSystems.Frontend.External.Models.Models.Billing
 
         public BillInfoEM Info { get; set; }
 
-        public List<BillItemEM> Items { get; }
+        public BasketEM Basket { get; set; }
+
+        public List<BillItemEM> Items { get; set; }
 
         public decimal TotalCost { get; set; }
     }
