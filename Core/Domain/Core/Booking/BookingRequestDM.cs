@@ -6,12 +6,12 @@ namespace TransportSystems.Frontend.Core.Domain.Core.Booking
 {
     public class BookingRequestDM
     {
-		public BookingRequestDM()
-		{
-			Waypoints = new WaypointsDM();
+        public BookingRequestDM()
+        {
+            Waypoints = new WaypointsDM();
             Basket = new BasketDM();
             Cargo = new CargoDM();
-		}
+        }
 
         public WaypointsDM Waypoints { get; set; }
 

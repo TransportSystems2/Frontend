@@ -23,7 +23,7 @@ namespace TransportSystems.Frontend.External.Business.IdentityServer.Token
 
         protected IIdentityDiscoveryService DiscoveryService { get; }
 
-        protected IIdentityConfig Config;
+        protected IIdentityConfig Config { get; }
 
         public async Task<bool> GetCode(string phone)
         {

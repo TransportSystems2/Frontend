@@ -14,7 +14,7 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.Address
             Repository = repository;
         }
 
-        protected IAddressRepository Repository {get;}
+        protected IAddressRepository Repository { get; }
 
         public Task<ICollection<AddressDM>> GetAddresses(string request, RequestPriority priority)
         {

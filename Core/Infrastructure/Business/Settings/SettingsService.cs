@@ -14,8 +14,6 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.Settings
 
         private string FileName => GetFileName();
 
-        protected abstract string GetFileName();
-
         public bool HasKey(string key)
         {
             var defValue = "defValue";
@@ -43,5 +41,7 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.Settings
         {
             SettingsRepository.Remove(key, FileName);
         }
+
+        protected abstract string GetFileName();
     }
 }

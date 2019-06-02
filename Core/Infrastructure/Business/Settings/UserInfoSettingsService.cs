@@ -16,7 +16,7 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.Settings
             JsonSerializer = jsonSerializer;
         }
 
-        protected IClaimJsonConverter JsonSerializer {get; }
+        protected IClaimJsonConverter JsonSerializer { get; }
 
         public bool ExistUserInfo()
         {

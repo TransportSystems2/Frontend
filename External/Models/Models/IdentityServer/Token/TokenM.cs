@@ -1,5 +1,4 @@
-﻿using System;
-namespace TransportSystems.Frontend.External.Models.Models.IdentityServer.Token
+﻿namespace TransportSystems.Frontend.External.Models.Models.IdentityServer.Token
 {
     public class TokenM
     {

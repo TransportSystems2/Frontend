@@ -1,5 +1,4 @@
-﻿using System;
-namespace TransportSystems.Frontend.External.Models.Models.Transport
+﻿namespace TransportSystems.Frontend.External.Models.Models.Transport
 {
     public class CargoEM
     {

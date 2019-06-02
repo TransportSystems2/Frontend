@@ -87,9 +87,8 @@ namespace TransportSystems.Frontend.App.ViewModels.SignUp
             {
                 provinces = await GarageService.GetAvailableProvinces(Country, RequestPriority.UserInitiated);
             }
-            catch (Exception e)
+            catch
             {
-
             }
 
             if (provinces == null || provinces.Count == 0)
@@ -113,9 +112,8 @@ namespace TransportSystems.Frontend.App.ViewModels.SignUp
             {
                 cities = await GarageService.GetAvailableLocalities(Country, Province.Value, RequestPriority.UserInitiated);
             }
-            catch (Exception e)
+            catch
             {
-
             }
 
             if (cities == null || cities.Count == 0)
@@ -139,9 +137,8 @@ namespace TransportSystems.Frontend.App.ViewModels.SignUp
             {
                 regions = await GarageService.GetAvailableDistricts(Country, Province.Value, City.Value, RequestPriority.UserInitiated);
             }
-            catch (Exception e)
+            catch
             {
-
             }
 
             if (regions == null || regions.Count == 0)

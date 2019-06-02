@@ -1,5 +1,4 @@
-﻿using System;
-namespace TransportSystems.Frontend.Core.Domain.Core.SignIn
+﻿namespace TransportSystems.Frontend.Core.Domain.Core.SignIn
 {
     public class IdentityTokenDM
     {

@@ -5,7 +5,7 @@ namespace TransportSystems.Frontend.Extensions
 {
     public static class CollectionExtension
 	{
-		public static void AddRange<T>(this ICollection<T> collection, IEnumerable<T> items)
+        public static void AddRange<T>(this ICollection<T> collection, IEnumerable<T> items)
         {
             if (items == null)
             {

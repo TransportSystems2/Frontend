@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
-using TransportSystems.Frontend.External.Models.SignUp;
 using Refit;
+using TransportSystems.Frontend.External.Models.SignUp;
 
 namespace TransportSystems.Frontend.External.SignUp
 {

@@ -1,5 +1,4 @@
-﻿using System;
-namespace TransportSystems.Frontend.External.Models.Models.Billing
+﻿namespace TransportSystems.Frontend.External.Models.Models.Billing
 {
     public class BasketEM
     {

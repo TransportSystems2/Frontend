@@ -31,7 +31,6 @@ namespace TransportSystems.Frontend.App
 
         private Task NavigateForSignedUser()
         {
-            return NavigationService.Navigate<HomeViewModel>();
             var userInfoService = Mvx.IoCProvider.Resolve<IUserInfoService>();
             return userInfoService.IsNewUser()
                 ? NavigationService.Navigate<UserTypeSelectorViewModel>()

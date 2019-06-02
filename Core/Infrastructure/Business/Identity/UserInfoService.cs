@@ -56,7 +56,6 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.Identity
             {
                 var userInfo = UserInfoSettingsService.GetUserInfo();
                 result = IsInRole(userInfo.Claims, role);
-
             }
 
             return result;

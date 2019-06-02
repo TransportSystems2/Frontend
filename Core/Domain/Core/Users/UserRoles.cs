@@ -1,5 +1,4 @@
-﻿using System;
-namespace TransportSystems.Frontend.Core.Domain.Core.Users
+﻿namespace TransportSystems.Frontend.Core.Domain.Core.Users
 {
     public static class UserRoles
     {
@@ -8,6 +7,5 @@ namespace TransportSystems.Frontend.Core.Domain.Core.Users
         public const string Dispatcher = "dispatcher";
 
         public const string Driver = "driver";
-
     }
 }

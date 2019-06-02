@@ -1,7 +1,7 @@
 ﻿using System;
-using TransportSystems.Frontend.Core.Domain.Interfaces.Settings;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
+using TransportSystems.Frontend.Core.Domain.Interfaces.Settings;
 
 namespace TransportSystems.Frontend.Core.Infrastructure.Settings
 {

@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace TransportSystems.Frontend.Core.Domain.Interfaces.Settings
 {
     public interface ISettingsRepository

@@ -18,7 +18,7 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Http.Addresses
             MappingService = mappingService;
         }
 
-        protected IMappingService MappingService {get;}
+        protected IMappingService MappingService { get; }
 
         public async Task<ICollection<AddressDM>> GetAddresses(string request, RequestPriority priority)
         {

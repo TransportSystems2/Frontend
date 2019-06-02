@@ -4,8 +4,12 @@ using TransportSystems.Frontend.External.Interfaces;
 
 namespace TransportSystems.Frontend.Core.Infrastructure.Http
 {
-    public class ApiRepository<T> where T: class
+    public class ApiRepository<T> where T : class
     {
+        private readonly Lazy<T> _background;
+        private readonly Lazy<T> _userInitiated;
+        private readonly Lazy<T> _speculative;
+
         public ApiRepository(IAPIManager apiManager)
         {
             APIManager = apiManager;
@@ -17,21 +21,17 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Http
             _speculative = new Lazy<T>(() => APIManager.Get<T>((External.Models.Models.RequestPriority)RequestPriority.Speculative));
         }
 
-        protected IAPIManager APIManager { get; }
-
-        private readonly Lazy<T> _background;
-        private readonly Lazy<T> _userInitiated;
-        private readonly Lazy<T> _speculative;
-
         public T Background => _background.Value;
 
         public T UserInitiated => _userInitiated.Value;
 
         public T Speculative => _speculative.Value;
 
+        protected IAPIManager APIManager { get; }
+
         public T GetApi(RequestPriority priority)
         {
-            switch(priority)
+            switch (priority)
             {
                 case RequestPriority.UserInitiated:
                     {

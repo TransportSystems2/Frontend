@@ -1,5 +1,4 @@
-﻿using System;
-namespace TransportSystems.Frontend.External.Models.Models.Customer
+﻿namespace TransportSystems.Frontend.External.Models.Models.Customer
 {
     public class CustomerEM
     {

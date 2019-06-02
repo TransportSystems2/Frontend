@@ -17,7 +17,7 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Business.Settings
             JsonSerializer = jsonSerializer;
         }
 
-        IJsonConverter JsonSerializer { get; }
+        private IJsonConverter JsonSerializer { get; }
 
         public bool ExistIdentityToken()
         {

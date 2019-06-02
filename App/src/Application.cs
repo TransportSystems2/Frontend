@@ -67,14 +67,13 @@ namespace TransportSystems.Frontend.App
 {
     public class Application : MvxApplication
     {
-        public static string APIURL = "http://host.docker.internal:82";
-        public static string IdentityServerURL = "http://host.docker.internal:82";
+        public const string APIURL = "http://host.docker.internal:82";
+        public const string IdentityServerURL = "http://host.docker.internal:82";
 
         private const string GrandType = "phone_number_token";
         private const string ClientId = "phone_number_authentication";
         private const string ClientSecret = "secret";
         private const string ApiName = "TSAPI";
-
 
         public override void Initialize()
         {
