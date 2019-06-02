@@ -21,4 +21,7 @@
     <Folder Include="Booking\" />
     <Folder Include="Orders\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="StyleCop.MSBuild" Version="6.1.0" />
+  </ItemGroup>
 </Project>

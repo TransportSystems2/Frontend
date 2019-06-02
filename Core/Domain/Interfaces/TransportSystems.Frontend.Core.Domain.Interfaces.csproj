@@ -24,4 +24,7 @@
     <ProjectReference Include="..\Core\TransportSystems.Frontend.Core.Domain.Core.csproj" />
     <ProjectReference Include="..\..\..\External\Models\TransportSystems.Frontend.External.Models.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="StyleCop.MSBuild" Version="6.1.0" />
+  </ItemGroup>
 </Project>

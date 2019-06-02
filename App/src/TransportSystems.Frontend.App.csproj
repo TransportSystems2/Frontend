@@ -42,6 +42,7 @@
     <PackageReference Include="IdentityModel" Version="3.10.1" />
     <PackageReference Include="modernhttpclient-updated" Version="2.7.2" />
     <PackageReference Include="MvvmValidation" Version="3.1.0" />
+    <PackageReference Include="StyleCop.MSBuild" Version="6.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Services\SignUp\ISignUpService.cs" />

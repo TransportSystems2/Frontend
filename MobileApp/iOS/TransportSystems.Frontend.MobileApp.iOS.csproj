@@ -277,6 +277,9 @@
     <PackageReference Include="System.Reflection.Emit" Version="4.3.0">
       <ExcludeAssets>all</ExcludeAssets>
     </PackageReference>
+    <PackageReference Include="StyleCop.MSBuild">
+      <Version>6.1.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\App\src\TransportSystems.Frontend.App.csproj">

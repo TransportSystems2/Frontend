@@ -20,4 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Interfaces\TransportSystems.Frontend.External.Interfaces.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="StyleCop.MSBuild" Version="6.1.0" />
+  </ItemGroup>
 </Project>
