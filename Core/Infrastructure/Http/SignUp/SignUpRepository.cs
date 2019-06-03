@@ -18,9 +18,9 @@ namespace TransportSystems.Frontend.Core.Infrastructure.Http.SignUp
 
         public Task Register(CompanyApplicationDM companyApplication, RequestPriority priority)
         {
-            var companyApplicationEM = Mapper.Map<CompanyApplicationEM>(companyApplication);
+            var domainCompanyApplication = Mapper.Map<CompanyApplicationEM>(companyApplication);
             var api = GetApi(priority);
-            return api.Register(companyApplicationEM);
+            return api.Register(domainCompanyApplication);
         }
     }
 }
