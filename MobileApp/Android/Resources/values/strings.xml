@@ -15,6 +15,12 @@
     <string name="ditch">в кювете</string>
     <string name="overturned">перевернут</string>
     <string name="comment">комментарий</string>
+    <string name="first_name">имя</string>
+    <string name="last_name">фамилия</string>
+    <string name="drive_my_self">езжу сам</string>
+    <string name="address">адрес</string>
+    <string name="phone_number">телефон</string>
+    <string name="start_to_work">приступить</string>
     <string name="city">город</string>
     <string name="comission_of_system">комиссия системы</string>
     <string name="degree_of_dificulty">степень сложности</string>

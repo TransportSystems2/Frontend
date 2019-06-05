@@ -12,7 +12,7 @@ namespace TransportSystems.Frontend.MobileApp.Android.Views.SignUp
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
+            SetContentView(Resource.Layout.FinishedSignUpView);
         }
     }
 }

@@ -5,6 +5,7 @@ using MvvmCross.ViewModels;
 using TransportSystems.Frontend.App.ViewModels.Home;
 using TransportSystems.Frontend.App.ViewModels.SignIn;
 using TransportSystems.Frontend.App.ViewModels.SignUp;
+using TransportSystems.Frontend.Core.Domain.Core.SignUp;
 using TransportSystems.Frontend.Core.Services.Interfaces.Identity;
 using TransportSystems.Frontend.Core.Services.Interfaces.Signin;
 
@@ -34,7 +35,7 @@ namespace TransportSystems.Frontend.App
             return NavigationService.Navigate<HomeViewModel>();
             var userInfoService = Mvx.IoCProvider.Resolve<IUserInfoService>();
             return userInfoService.IsNewUser()
-                ? NavigationService.Navigate<UserTypeSelectorViewModel>()
+                ? NavigationService.Navigate<DispatcherViewModel, CompanyApplicationDM>(new CompanyApplicationDM())
                 : NavigationService.Navigate<HomeViewModel>();
         }
     }

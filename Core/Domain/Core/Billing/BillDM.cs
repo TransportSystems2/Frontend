@@ -11,6 +11,8 @@ namespace TransportSystems.Frontend.Core.Domain.Core.Billing
 
         public BillInfoDM Info { get; set; }
 
+        public BasketDM Basket { get; set; }
+
         public List<BillItemDM> Items { get; set; }
 
         public decimal TotalCost { get; set; }

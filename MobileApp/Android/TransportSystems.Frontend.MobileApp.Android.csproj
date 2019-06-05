@@ -30,6 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -130,17 +131,15 @@
     <Compile Include="Views\SignIn\SignInPhoneView.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\SignUp\FinishedSignUpView.cs" />
-    <Compile Include="Views\SignUp\UserTypeSelectorView.cs" />
-    <Compile Include="Views\SignUp\Dispatcher\DispatcherLocationView.cs" />
-    <Compile Include="Views\SignUp\Dispatcher\DispatcherView.cs" />
-    <Compile Include="Views\SignUp\Driver\DriverLocationView.cs" />
-    <Compile Include="Views\SignUp\Driver\DriverView.cs" />
-    <Compile Include="Views\SignUp\Driver\VehicleView.cs" />
     <Compile Include="Views\Home\HomeView.cs" />
     <Compile Include="Views\Orders\OrdersView.cs" />
     <Compile Include="Views\Settings\SettingsView.cs" />
     <Compile Include="Views\Cargo\CargoView.cs" />
     <Compile Include="Views\Addressess\AddressesView.cs" />
+    <Compile Include="Views\SignUp\LocationView.cs" />
+    <Compile Include="Views\SignUp\DispatcherView.cs" />
+    <Compile Include="Views\SignUp\VehicleView.cs" />
+    <Compile Include="Views\SignUp\DriverView.cs" />
     <Compile Include="Views\Booking\BookingView.cs" />
     <Compile Include="Views\Summary\SummaryView.cs" />
     <Compile Include="Views\Users\CustomerView.cs" />
@@ -162,13 +161,12 @@
     <AndroidResource Include="Resources\layout\SplashScreen.axml" />
     <AndroidResource Include="Resources\layout\SignInPhoneView.axml" />
     <AndroidResource Include="Resources\layout\VerifyCodeView.axml" />
-    <AndroidResource Include="Resources\layout\DispatcherLocationView.axml" />
+    <AndroidResource Include="Resources\layout\LocationView.axml" />
     <AndroidResource Include="Resources\layout\DispatcherView.axml" />
     <AndroidResource Include="Resources\layout\DriverLocationView.axml" />
     <AndroidResource Include="Resources\layout\DriverView.axml" />
     <AndroidResource Include="Resources\layout\VehicleView.axml" />
     <AndroidResource Include="Resources\layout\FinishedSignUpView.axml" />
-    <AndroidResource Include="Resources\layout\UserTypeSelectorView.axml" />
     <AndroidResource Include="Resources\menu\bottom_navigation_main.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />

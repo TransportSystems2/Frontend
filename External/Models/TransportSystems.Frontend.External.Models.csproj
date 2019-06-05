@@ -22,4 +22,7 @@
     <Folder Include="Models\Orders\" />
     <Folder Include="Models\Customer\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNetDistance" Version="1.0.4" />
+  </ItemGroup>
 </Project>

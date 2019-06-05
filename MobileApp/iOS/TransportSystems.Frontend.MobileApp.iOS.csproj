@@ -180,10 +180,6 @@
     <Compile Include="Views\SignUp\Driver\VehicleView.designer.cs">
       <DependentUpon>..\..\SignIn\Driver\VehicleView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\SignUp\UserTypeSelectorView.cs" />
-    <Compile Include="Views\SignUp\UserTypeSelectorView.designer.cs">
-      <DependentUpon>UserTypeSelectorView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\SignIn\SignInPhoneView.cs" />
     <Compile Include="Views\SignIn\SignInPhoneView.designer.cs">
       <DependentUpon>SignInPhoneView.cs</DependentUpon>

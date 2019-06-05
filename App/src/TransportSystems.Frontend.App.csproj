@@ -12,8 +12,6 @@
     <Folder Include="Utils\" />
     <Folder Include="Models\SignUp\" />
     <Folder Include="ViewModels\SignUp\" />
-    <Folder Include="ViewModels\SignUp\Dispatcher\" />
-    <Folder Include="ViewModels\SignUp\Driver\" />
     <Folder Include="Models\Geo\" />
     <Folder Include="Models\SignUp\" />
     <Folder Include="Models\Transport\" />

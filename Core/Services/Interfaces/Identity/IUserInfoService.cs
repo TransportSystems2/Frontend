@@ -7,6 +7,8 @@ namespace TransportSystems.Frontend.Core.Services.Interfaces.Identity
     {
         Task<UserInfoDM> UpdateUserInfo();
 
+        string GetPhoneNumber();
+
         bool IsInRole(string role);
 
         bool IsNewUser();

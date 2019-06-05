@@ -15,9 +15,9 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp
             set.Bind(CongratulationsLabel).To(vm => vm.CongratulationsLabel);
             set.Bind(DescriptionLabel).To(vm => vm.DescriptionLabel);
 
-            set.Bind(FinishButton).For("Title").To(vm => vm.FinishButtonText);
-            set.Bind(FinishButton).To(vm => vm.FinishCommand);
-            set.Apply();
+            //set.Bind(FinishButton).For("Title").To(vm => vm.FinishButtonText);
+            //set.Bind(FinishButton).To(vm => vm.FinishCommand);
+            //set.Apply();
         }
     }
 }

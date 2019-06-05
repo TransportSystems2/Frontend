@@ -1,5 +1,5 @@
 ﻿using System;
-using TransportSystems.Frontend.External.Models.Geo;
+using DotNetDistance;
 using TransportSystems.Frontend.External.Models.Models.Billing;
 
 namespace TransportSystems.Frontend.External.Models.Models.Booking
@@ -8,16 +8,16 @@ namespace TransportSystems.Frontend.External.Models.Models.Booking
     {
         public string Title { get; set; }
 
-        public AddressEM RootAddress { get; set; }
+        public int MarketId { get; set; }
 
-        public int TotalDistance { get; set; }
+        public TimeBeltEM MarketTimeBelt { get; set; }
 
-        public int FeedDistance { get; set; }
+        public Distance TotalDistance { get; set; }
 
-        public int FeedDuration { get; set; }
-
-        public BillEM Bill { get; set; }
+        public Distance FeedDistance { get; set; }
 
         public TimeSpan AvgDeliveryTime { get; set; }
+
+        public BillEM Bill { get; set; }
     }
 }

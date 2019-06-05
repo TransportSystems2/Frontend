@@ -1,18 +1,18 @@
 ﻿using Android.App;
 using Android.OS;
-using TransportSystems.Frontend.App.ViewModels.SignUp;
 using MvvmCross.Platforms.Android.Views;
+using TransportSystems.Frontend.App.ViewModels.SignUp;
 
 namespace TransportSystems.Frontend.MobileApp.Android.Views.SignUp
 {
-    [Activity(Label = "UserTypeSelectorView")]
-    public class UserTypeSelectorView : MvxActivity<UserTypeSelectorViewModel>
+    [Activity(Label = "LocationView")]
+    public class LocationView : MvxActivity<LocationViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.UserTypeSelectorView);
+            SetContentView(Resource.Layout.LocationView);
         }
     }
 }

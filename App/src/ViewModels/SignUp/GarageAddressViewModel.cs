@@ -6,9 +6,9 @@ using TransportSystems.Frontend.Core.Domain.Core;
 using TransportSystems.Frontend.Core.Domain.Core.Geo;
 using TransportSystems.Frontend.Core.Services.Interfaces.Address;
 
-namespace TransportSystems.Frontend.App.ViewModels.SignUp.Dispatcher.Garages
+namespace TransportSystems.Frontend.App.ViewModels.SignUp
 {
-    public class GarageAddressViewModel : BaseViewModel<DispatcherCompanyM>
+    public class GarageAddressViewModel : BaseViewModel<CompanyApplicationM>
     {
         public GarageAddressViewModel(IAddressService addressService)
         {

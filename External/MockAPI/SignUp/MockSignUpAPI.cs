@@ -12,7 +12,7 @@ namespace TransportSystems.Frontend.External.MockAPI.SignUp
         {
         }
 
-        public async Task RegisterDispatcher([Body(BodySerializationMethod.Json)] DispatcherCompanyEM dispatcherCompany)
+        public async Task Register([Body(BodySerializationMethod.Json)] CompanyApplicationEM dispatcherCompany)
         {
             await Task.Delay(1000);
         }

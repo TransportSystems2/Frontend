@@ -2,7 +2,7 @@
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Binding.Views;
-using TransportSystems.Frontend.App.ViewModels.SignUp.Driver;
+using TransportSystems.Frontend.App.ViewModels.SignUp;
 using UIKit;
 
 namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp.Driver
@@ -39,26 +39,6 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp.Driver
             kindsPicker.ShowSelectionIndicator = true;
             TypeTextField.InputView = kindsPicker;
             TypeTextField.InputAccessoryView = toolBar;
-
-            var set = this.CreateBindingSet<VehicleView, VehicleViewModel>();
-            set.Bind(brandsPickerViewModel).For(p => p.SelectedItem).To(vm => vm.Brand);
-            set.Bind(brandsPickerViewModel).For(p => p.ItemsSource).To(vm => vm.Brands);
-            set.Bind(capacitiesPickerViewModel).For(p => p.SelectedItem).To(vm => vm.Capaticy);
-            set.Bind(capacitiesPickerViewModel).For(p => p.ItemsSource).To(vm => vm.Capacities);
-            set.Bind(kindsPickerViewModel).For(p => p.SelectedItem).To(vm => vm.Kind);
-            set.Bind(kindsPickerViewModel).For(p => p.ItemsSource).To(vm => vm.Kinds);
-            set.Bind(TypeLabel).To(vm => vm.TypeLabel);
-            set.Bind(TypeTextField).To(vm => vm.Kind);
-            set.Bind(BrandLabel).To(vm => vm.BrandLabel);
-            set.Bind(BrandTextField).To(vm => vm.Brand);
-            set.Bind(MaxTonCapacityLabel).To(vm => vm.MaxTonCapacityLabel);
-            set.Bind(MaxTonCapacityTextField).To(vm => vm.Capaticy);
-            set.Bind(RegistrationNumberLabel).To(vm => vm.RegistrationNumberLabel);
-            set.Bind(RegistrationNumberTextField).To(vm => vm.RegistrationNumber);
-
-            set.Bind(NextButton).For("Title").To(vm => vm.NextButtonText);
-            set.Bind(NextButton).To(vm => vm.NextCommand);
-            set.Apply();
         }
 
         [Export("DoneAction")]
