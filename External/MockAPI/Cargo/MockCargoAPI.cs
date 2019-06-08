@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using TransportSystems.Frontend.External.Interfaces.Cargo;
 using TransportSystems.Frontend.External.Models.Cargo;
