@@ -16,13 +16,6 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 {
     public class CargoViewModel : BaseViewModel<BookingRequestDM>
     {
-        public CargoViewModel(ICargoService cargoService)
-        {
-            CargoService = cargoService;
-            Validator = new ValidationHelper();
-            NextCommand = new MvxAsyncCommand(NavigateToAddressView);
-        }
-
         public readonly INC<ICollection<string>> Kinds = new NC<ICollection<string>>();
 
         public readonly INC<ICollection<string>> Weights = new NC<ICollection<string>>();
@@ -53,6 +46,13 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 
         public readonly INC<Dictionary<string, string>> Errors = new NC<Dictionary<string, string>>();
 
+        public CargoViewModel(ICargoService cargoService)
+        {
+            CargoService = cargoService;
+            Validator = new ValidationHelper();
+            NextCommand = new MvxAsyncCommand(NavigateToAddressView);
+        }
+
         public IMvxCommand NextCommand { get; }
 
         protected ICargoService CargoService { get; }
@@ -63,8 +63,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 
         public override void Prepare()
         {
-            Title.Value = "Груз";
-            LockedWheelsList.Value = new List<int> { 0, 1, 2, 3, 4};
+            LockedWheelsList.Value = new List<int> { 0, 1, 2, 3, 4 };
             LockedWheels.Value = 0;
 
 #if DEBUG
@@ -122,7 +121,7 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
                 return;
             }
 
-            var modelIsInflated =  await InflateModel();
+            var modelIsInflated = await InflateModel();
             if (modelIsInflated)
             {
                 await NavigationService.Navigate<AddressesViewModel, BookingRequestDM>(Model);
@@ -206,9 +205,9 @@ namespace TransportSystems.Frontend.App.ViewModels.Cargo
 
                 return RuleResult.Valid();
             }
-            catch(Exception)
+            catch (Exception)
             {
-                //TODO залогировать причину возникновения ошибки
+                // TODO залогировать причину возникновения ошибки
                 return RuleResult.Invalid("Ошибка валидации регистрационного номера");
             }
         }

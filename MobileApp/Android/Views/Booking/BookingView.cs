@@ -15,6 +15,5 @@ namespace TransportSystems.Frontend.MobileApp.Android.Views.Booking
 
             SetContentView(Resource.Layout.BookingView);
         }
-
     }
 }

@@ -8,7 +8,7 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignIn
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.SignIn
 {
     [Register("SignInPhoneView")]
     partial class SignInPhoneView

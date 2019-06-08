@@ -1,9 +1,9 @@
 ﻿using Android.App;
 using Android.OS;
-using TransportSystems.Frontend.App.ViewModels.SignUp.Dispatcher;
 using MvvmCross.Platforms.Android.Views;
+using TransportSystems.Frontend.App.ViewModels.SignUp;
 
-namespace TransportSystems.Frontend.MobileApp.Android.Views.SignUp.Dispatcher
+namespace TransportSystems.Frontend.MobileApp.Android.Views.SignUp
 {
     [Activity(Label = "DispatcherView")]
     public class DispatcherView : MvxActivity<DispatcherViewModel>

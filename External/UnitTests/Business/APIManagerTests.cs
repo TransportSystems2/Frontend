@@ -5,16 +5,6 @@ using Xunit;
 
 namespace TransportSystems.Frontend.External.UnitTests.Business
 {
-    public class APIManagerTestSuite
-    {
-        public APIManagerTestSuite()
-        {
-            APIManager = new APIManager("http://test.ru", new System.Net.Http.HttpClientHandler());
-        }
-
-        public IAPIManager APIManager { get; }
-    }
-
     public class APIManagerTests
     {
         public APIManagerTests()
@@ -29,7 +19,17 @@ namespace TransportSystems.Frontend.External.UnitTests.Business
         {
             var api = Suite.APIManager.Get<IAPI>(RequestPriority.UserInitiated);
 
-            Assert.NotNull(api); 
+            Assert.NotNull(api);
+        }
+
+        protected class APIManagerTestSuite
+        {
+            public APIManagerTestSuite()
+            {
+                APIManager = new APIManager("http://test.ru", new System.Net.Http.HttpClientHandler());
+            }
+
+            public IAPIManager APIManager { get; }
         }
     }
 }

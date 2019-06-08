@@ -1,7 +1,7 @@
 ﻿using MvvmCross.Binding.BindingContext;
 using TransportSystems.Frontend.App.ViewModels.SignIn;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignIn
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.SignIn
 {
     public partial class SignInPhoneView : BaseView
     {

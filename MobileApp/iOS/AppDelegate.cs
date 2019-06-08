@@ -2,7 +2,7 @@
 using MvvmCross.Platforms.Ios.Core;
 using UIKit;
 
-namespace TransportSystems.Frontend.MobileApp.iOS
+namespace TransportSystems.Frontend.MobileApp.Ios
 {
     [Register("AppDelegate")]
     public class AppDelegate : MvxApplicationDelegate<MvxIosSetup<App.Application>, App.Application>
@@ -21,5 +21,3 @@ namespace TransportSystems.Frontend.MobileApp.iOS
         }
     }
 }
-
-

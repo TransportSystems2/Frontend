@@ -9,19 +9,6 @@ using Xunit;
 
 namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Business
 {
-    public class CargoServiceTestSuite
-    {
-        public CargoServiceTestSuite()
-        {
-            CargoRepositoryMock = new Mock<ICargoRepository>();
-            CargoService = new CargoService(CargoRepositoryMock.Object);
-        }
-
-        public ICargoService CargoService { get; }
-
-        public Mock<ICargoRepository> CargoRepositoryMock { get; }
-    }
-
     public class CargoServiceTests
     {
         public CargoServiceTests()
@@ -47,6 +34,19 @@ namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Business
                 .Verify(m => m.GetAvailableParams(priority), Times.Once);
 
             Assert.Equal(domainParams, availableParams);
+        }
+
+        protected class CargoServiceTestSuite
+        {
+            public CargoServiceTestSuite()
+            {
+                CargoRepositoryMock = new Mock<ICargoRepository>();
+                CargoService = new CargoService(CargoRepositoryMock.Object);
+            }
+
+            public ICargoService CargoService { get; }
+
+            public Mock<ICargoRepository> CargoRepositoryMock { get; }
         }
     }
 }

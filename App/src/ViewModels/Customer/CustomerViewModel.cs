@@ -17,19 +17,19 @@ namespace TransportSystems.Frontend.App.ViewModels.Customer
             NextCommand = new MvxAsyncCommand(NavigateToSummaryView);
         }
 
-        public readonly INC<string> Name = new NC<string>();
+        public INC<string> Name { get; } = new NC<string>();
 
-        public readonly INC<string> Phone = new NC<string>();
+        public INC<string> Phone { get; } = new NC<string>();
 
-        public readonly INC<string> AditionalPhone = new NC<string>();
+        public INC<string> AditionalPhone { get; } = new NC<string>();
 
-        public readonly INC<bool> Validating = new NC<bool>();
+        public INC<bool> Validating { get; } = new NC<bool>();
 
-        public readonly INC<Dictionary<string, string>> Errors = new NC<Dictionary<string, string>>();
+        public INC<Dictionary<string, string>> Errors { get; } = new NC<Dictionary<string, string>>();
 
-        protected ValidationHelper Validator { get; set; }
+        public IMvxCommand NextCommand { get; }
 
-        public IMvxCommand NextCommand;
+        protected ValidationHelper Validator { get; }
 
         public override void Prepare()
         {

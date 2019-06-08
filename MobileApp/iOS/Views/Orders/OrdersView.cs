@@ -2,7 +2,7 @@
 using MvvmCross.Platforms.Ios.Presenters.Attributes;
 using TransportSystems.Frontend.App.ViewModels.Orders;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Orders
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Orders
 {
     [MvxTabPresentation(WrapInNavigationController = true, TabName = "Orders", TabIconName = "Screens_Orders_Icon")]
     public partial class OrdersView : BaseView

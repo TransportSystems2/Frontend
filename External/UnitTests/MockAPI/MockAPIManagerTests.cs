@@ -5,16 +5,6 @@ using Xunit;
 
 namespace TransportSystems.Frontend.External.UnitTests.MockAPI
 {
-    public class MockAPIManagerTestSuite
-    {
-        public MockAPIManagerTestSuite()
-        {
-            APIManager = new MockAPIManager();
-        }
-
-        public IAPIManager APIManager { get; }
-    }
-
     public class MockAPIManagerTests
     {
         public MockAPIManagerTests()
@@ -31,6 +21,16 @@ namespace TransportSystems.Frontend.External.UnitTests.MockAPI
         
             Assert.NotNull(api);
             Assert.True(api is IAPI);
+        }
+
+        protected class MockAPIManagerTestSuite
+        {
+            public MockAPIManagerTestSuite()
+            {
+                APIManager = new MockAPIManager();
+            }
+
+            public IAPIManager APIManager { get; }
         }
     }
 }

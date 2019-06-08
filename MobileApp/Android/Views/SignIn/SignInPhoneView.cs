@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.OS;
-using TransportSystems.Frontend.App.ViewModels.SignIn;
 using MvvmCross.Platforms.Android.Views;
+using TransportSystems.Frontend.App.ViewModels.SignIn;
 
 namespace TransportSystems.Frontend.MobileApp.Android.Views.SignUp
 {

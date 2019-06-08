@@ -1,11 +1,14 @@
-﻿namespace TransportSystems.Frontend.External.Models.Models.Billing
+﻿using System;
+using DotNetDistance;
+
+namespace TransportSystems.Frontend.External.Models.Models.Billing
 {
     public class BasketEM
     {
         /// <summary>
         /// Протяженость маршрута (км)
         /// </summary>
-        public int KmValue { get; set; }
+        public Distance Distance { get; set; }
 
         /// <summary>
         /// Требуется погрузка

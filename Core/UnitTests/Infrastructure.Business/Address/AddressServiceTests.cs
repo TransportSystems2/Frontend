@@ -10,19 +10,6 @@ using Xunit;
 
 namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Business
 {
-    public class AddressTestSuite
-    {
-        public AddressTestSuite()
-        {
-            AddressRepositoryMock = new Mock<IAddressRepository>();
-            AddressService = new AddressService(AddressRepositoryMock.Object);
-        }
-        
-        public IAddressService AddressService {get;}
-
-        public Mock<IAddressRepository> AddressRepositoryMock {get;}
-    }
-
     public class AddressServiceTests
     {
         public AddressServiceTests()
@@ -30,7 +17,7 @@ namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Business
             Suite = new AddressTestSuite();
         }
 
-        public AddressTestSuite Suite {get;}
+        public AddressTestSuite Suite { get; }
 
         [Fact]
         public async Task GetAddress()
@@ -71,6 +58,19 @@ namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Business
                 .Verify(m => m.GetAddressesByCoordinate(latitude, longitude, priority), Times.Once);
 
             Assert.Equal(addresses, results);
+        }
+
+        public class AddressTestSuite
+        {
+            public AddressTestSuite()
+            {
+                AddressRepositoryMock = new Mock<IAddressRepository>();
+                AddressService = new AddressService(AddressRepositoryMock.Object);
+            }
+
+            public IAddressService AddressService { get; }
+
+            public Mock<IAddressRepository> AddressRepositoryMock { get; }
         }
     }
 }

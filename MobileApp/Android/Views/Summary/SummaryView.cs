@@ -15,6 +15,5 @@ namespace TransportSystems.Frontend.MobileApp.Android.Views.Summary
 
             SetContentView(Resource.Layout.SummaryView);
         }
-
     }
 }

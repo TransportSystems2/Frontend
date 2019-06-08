@@ -1,10 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using MvvmCross.Commands;
 using MvvmCross.Plugin.FieldBinding;
 using TransportSystems.Frontend.App.Models.SignIn;
 using TransportSystems.Frontend.App.ViewModels.Home;
 using TransportSystems.Frontend.App.ViewModels.SignUp;
+using TransportSystems.Frontend.Core.Domain.Core.SignUp;
 using TransportSystems.Frontend.Core.Services.Interfaces.Identity;
 using TransportSystems.Frontend.Core.Services.Interfaces.Signin;
 
@@ -12,6 +12,10 @@ namespace TransportSystems.Frontend.App.ViewModels.SignIn
 {
     public class VerifyCodeViewModel : BaseViewModel<PhoneNumberM>
     {
+        public readonly INC<string> PhoneNumber = new NC<string>();
+
+        public readonly INC<string> Code = new NC<string>();
+
         public VerifyCodeViewModel(ISignInService signInService, IUserInfoService userInfoService)
         {
             SignInService = signInService;
@@ -20,22 +24,11 @@ namespace TransportSystems.Frontend.App.ViewModels.SignIn
             VerifyCodeCommand = new MvxAsyncCommand(VerifyCodeAsync);
         }
 
-        public readonly INC<string> PhoneNumber = new NC<string>();
-
-        public readonly INC<string> Code = new NC<string>();
-
         public IMvxCommand VerifyCodeCommand { get; private set; }
 
         private ISignInService SignInService { get; }
 
         private IUserInfoService UserInfoService { get; }
-
-        public override void Prepare()
-        {
-            Title.Value = "Проверка кода";
-
-            base.Prepare();
-        }
 
         public override void Prepare(PhoneNumberM parameter)
         {
@@ -47,7 +40,7 @@ namespace TransportSystems.Frontend.App.ViewModels.SignIn
             var success = await SignInService.AuthAsync(PhoneNumber.Value, Code.Value);
             if (!success)
             {
-                // we should say verification code is failed
+                // should say verification code is failed
                 return;
             }
 
@@ -55,7 +48,7 @@ namespace TransportSystems.Frontend.App.ViewModels.SignIn
 
             if (UserInfoService.IsNewUser())
             {
-                await NavigationService.Navigate<UserTypeSelectorViewModel>();
+                await NavigationService.Navigate<DispatcherViewModel, CompanyApplicationDM>(new CompanyApplicationDM());
             }
             else
             {

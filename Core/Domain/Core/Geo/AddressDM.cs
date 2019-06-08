@@ -54,7 +54,7 @@
 
         public override string ToString()
         {
-            return ($"{Province} " +
+            return $"{Province} " +
                     $"{Area} " +
                     $"{Locality} " +
                     $"{District} " +
@@ -65,7 +65,7 @@
                     $"{Latitude} " +
                     $"{Longitude} " +
                     $"{AdjustedLatitude} " +
-                    $"{AdjustedLongitude}");
+                    $"{AdjustedLongitude}";
         }
     }
 }

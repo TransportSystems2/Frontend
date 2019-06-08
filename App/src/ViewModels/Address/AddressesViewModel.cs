@@ -13,13 +13,6 @@ namespace TransportSystems.Frontend.App.ViewModels.Address
 {
     public class AddressesViewModel : BaseViewModel<BookingRequestDM>
     {
-        public AddressesViewModel(IAddressService addressesService)
-        {
-            AddressesService = addressesService;
-
-            NextCommand = new MvxAsyncCommand(NavigateToBookingView);
-        }
-
         public readonly INC<string> StartAddressRequest = new NC<string>();
 
         public readonly INC<string> EndAddressRequest = new NC<string>();
@@ -34,6 +27,13 @@ namespace TransportSystems.Frontend.App.ViewModels.Address
 
         public readonly INC<string> Comment = new NC<string>();
 
+        public AddressesViewModel(IAddressService addressesService)
+        {
+            AddressesService = addressesService;
+
+            NextCommand = new MvxAsyncCommand(NavigateToBookingView);
+        }
+
         public IMvxCommand NextCommand { get; }
 
         protected IAddressService AddressesService { get; }
@@ -45,7 +45,6 @@ namespace TransportSystems.Frontend.App.ViewModels.Address
             StartAddressRequest.Changed += HandleFromAddressChanged;
             EndAddressRequest.Changed += HandleToAddressChanged;
         }
-
 
         public override void ViewDisappearing()
         {

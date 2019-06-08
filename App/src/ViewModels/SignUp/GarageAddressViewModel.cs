@@ -6,18 +6,18 @@ using TransportSystems.Frontend.Core.Domain.Core;
 using TransportSystems.Frontend.Core.Domain.Core.Geo;
 using TransportSystems.Frontend.Core.Services.Interfaces.Address;
 
-namespace TransportSystems.Frontend.App.ViewModels.SignUp.Dispatcher.Garages
+namespace TransportSystems.Frontend.App.ViewModels.SignUp
 {
-    public class GarageAddressViewModel : BaseViewModel<DispatcherCompanyM>
+    public class GarageAddressViewModel : BaseViewModel<CompanyApplicationM>
     {
         public GarageAddressViewModel(IAddressService addressService)
         {
             AddressService = addressService;
         }
 
-        public INC<string> AddressRequest { get; private set; } = new NC<string>();
+        public INC<string> AddressRequest { get; } = new NC<string>();
 
-        public readonly INC<ICollection<AddressDM>> AddressesResponse = new NC<ICollection<AddressDM>>();
+        public INC<ICollection<AddressDM>> AddressesResponse { get; } = new NC<ICollection<AddressDM>>();
 
         protected IAddressService AddressService { get; private set; }
 

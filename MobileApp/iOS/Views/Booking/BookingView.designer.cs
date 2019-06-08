@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Booking
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Booking
 {
 	[Register ("BookingView")]
 	partial class BookingView

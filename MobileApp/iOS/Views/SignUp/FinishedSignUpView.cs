@@ -3,7 +3,7 @@ using MvvmCross.Binding.BindingContext;
 using TransportSystems.Frontend.App.ViewModels.SignUp;
 using UIKit;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.SignUp
 {
     public partial class FinishedSignUpView : BaseView
     {
@@ -12,13 +12,9 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp
             base.ViewDidLoad();
 
             var set = this.CreateBindingSet<FinishedSignUpView, FinishedSignUpViewModel>();
+
             set.Bind(CongratulationsLabel).To(vm => vm.CongratulationsLabel);
             set.Bind(DescriptionLabel).To(vm => vm.DescriptionLabel);
-
-            set.Bind(FinishButton).For("Title").To(vm => vm.FinishButtonText);
-            set.Bind(FinishButton).To(vm => vm.FinishCommand);
-            set.Apply();
         }
     }
 }
-

@@ -1,9 +1,9 @@
 ﻿using Android.App;
 using Android.OS;
-using TransportSystems.Frontend.App.ViewModels.SignUp.Driver;
 using MvvmCross.Platforms.Android.Views;
+using TransportSystems.Frontend.App.ViewModels.SignUp;
 
-namespace TransportSystems.Frontend.MobileApp.Android.Views.SignUp.Driver
+namespace TransportSystems.Frontend.MobileApp.Android.Views.SignUp
 {
     [Activity(Label = "DriverView")]
     public class DriverView : MvxActivity<DriverViewModel>

@@ -1,5 +1,4 @@
-﻿
-using Android.App;
+﻿using Android.App;
 using Android.OS;
 using MvvmCross.Platforms.Android.Views;
 using TransportSystems.Frontend.App.ViewModels.Customer;
@@ -15,6 +14,5 @@ namespace TransportSystems.Frontend.MobileApp.Android.Views.Users
 
             SetContentView(Resource.Layout.CustomerView);
         }
-
     }
 }

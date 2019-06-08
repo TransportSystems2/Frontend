@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Home
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Home
 {
 	[Register ("HomeView")]
 	partial class HomeView

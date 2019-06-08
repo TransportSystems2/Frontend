@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.SignUp
 {
 	[Register ("FinishedSignUpView")]
 	partial class FinishedSignUpView

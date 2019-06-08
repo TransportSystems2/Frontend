@@ -15,8 +15,9 @@ namespace TransportSystems.Frontend.MobileApp.Android.Views.Home
        WindowSoftInputMode = SoftInput.AdjustResize | SoftInput.StateHidden)]
     public class HomeView : MvxAppCompatActivity<HomeViewModel>
     {
-        public ICommand GoToOrdersCommand { get; set; }
-        public ICommand GoToSettingsCommand { get; set; }
+        public ICommand GoToOrdersCommand { get; }
+
+        public ICommand GoToSettingsCommand { get; }
 
         protected override void OnCreate(Bundle bundle)
         {

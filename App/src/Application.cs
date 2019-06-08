@@ -137,7 +137,7 @@ namespace TransportSystems.Frontend.App
 
         protected virtual void RegisterUtils()
         {
-            Mvx.IoCProvider.RegisterType<IJsonConverter, CustomJsonConverter>();
+            Mvx.IoCProvider.RegisterType<IJsonConverter, CustomClaimJsonConverter>();
             Mvx.IoCProvider.RegisterType<IClaimJsonConverter, CustomClaimJsonConverter>();
             Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IAPIManager>(() =>
             {

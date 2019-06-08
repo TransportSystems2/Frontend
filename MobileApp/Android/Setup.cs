@@ -4,12 +4,11 @@ using Android.Support.Design.Widget;
 using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.Widget;
-using TransportSystems.Frontend.App;
 using MvvmCross.Droid.Support.V4;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross.Platforms.Android.Presenters;
-
+using TransportSystems.Frontend.App;
 
 namespace TransportSystems.Frontend.MobileApp.Android
 {

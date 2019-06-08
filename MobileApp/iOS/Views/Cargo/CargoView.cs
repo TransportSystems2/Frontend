@@ -5,7 +5,7 @@ using MvvmCross.Platforms.Ios.Binding.Views;
 using TransportSystems.Frontend.App.ViewModels.Cargo;
 using UIKit;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Cargo
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Cargo
 {
     public partial class CargoView : BaseView
     {

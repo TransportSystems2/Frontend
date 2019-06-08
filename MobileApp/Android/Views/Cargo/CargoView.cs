@@ -15,6 +15,5 @@ namespace TransportSystems.Frontend.MobileApp.Android.Views.Cargo
 
             SetContentView(Resource.Layout.CargoView);
         }
-
     }
 }

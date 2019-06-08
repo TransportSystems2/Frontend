@@ -11,7 +11,7 @@ namespace TransportSystems.Frontend.External.MockAPI
         {
             var type = typeof(T);
             var types = typeof(MockAPIManager).Assembly.GetTypes();
-            var creatingType = types.First(t => t.GetInterface((typeof(T).FullName)) != null);
+            var creatingType = types.First(t => t.GetInterface(typeof(T).FullName) != null);
             var instance = (T)Activator.CreateInstance(creatingType);
 
             return instance;

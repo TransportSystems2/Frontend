@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Orders
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Orders
 {
 	[Register ("OrdersView")]
 	partial class OrdersView

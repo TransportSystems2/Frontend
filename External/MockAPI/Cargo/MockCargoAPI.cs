@@ -17,23 +17,23 @@ namespace TransportSystems.Frontend.External.MockAPI.Cargo
             {
                 Brands = new List<CatalogItemEM>
                 {
-                    new CatalogItemEM {Name = "Toyota", Value = 1},
-                    new CatalogItemEM {Name = "Nissan", Value = 2},
-                    new CatalogItemEM {Name = "BMW", Value = 3},
+                    new CatalogItemEM { Name = "Toyota", Value = 1 },
+                    new CatalogItemEM { Name = "Nissan", Value = 2 },
+                    new CatalogItemEM { Name = "BMW", Value = 3 },
                 },
 
                 Weights = new List<CatalogItemEM>
                 {
-                    new CatalogItemEM {Name = "1 т", Value = 1000 },
-                    new CatalogItemEM {Name = "2 т", Value = 2000 },
-                    new CatalogItemEM {Name = "3 т", Value = 3000 }
+                    new CatalogItemEM { Name = "1 т", Value = 1000 },
+                    new CatalogItemEM { Name = "2 т", Value = 2000 },
+                    new CatalogItemEM { Name = "3 т", Value = 3000 }
                 },
 
                 Kinds = new List<CatalogItemEM>
                 {
-                    new CatalogItemEM { Name = "Мотоцикл", Value = 1},
-                    new CatalogItemEM { Name = "Автомобиль", Value = 2},
-                    new CatalogItemEM { Name = "Лодка", Value = 3}
+                    new CatalogItemEM { Name = "Мотоцикл", Value = 1 },
+                    new CatalogItemEM { Name = "Автомобиль", Value = 2 },
+                    new CatalogItemEM { Name = "Лодка", Value = 3 }
                 }
             };
 

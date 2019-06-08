@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace TransportSystems.Frontend.App.Models.Transport
 {
     [Flags]

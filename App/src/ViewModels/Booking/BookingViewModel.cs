@@ -20,21 +20,19 @@ namespace TransportSystems.Frontend.App.ViewModels.Booking
             NextCommand = new MvxAsyncCommand(Next);
         }
 
-        public INC<ICollection<string>> Cities = new NC<ICollection<string>>();
+        public INC<ICollection<string>> Cities { get; } = new NC<ICollection<string>>();
 
-        public INC<string> City = new NC<string>();
+        public INC<string> City { get; } = new NC<string>();
 
-        public INC<int> Comission = new NC<int>();
+        public INC<int> Comission { get; } = new NC<int>();
 
-        public INC<float> DegreeOfDificulty = new NC<float>();
+        public INC<float> DegreeOfDificulty { get; } = new NC<float>();
 
-        public INC<int> FeedDuration = new NC<int>();
+        public INC<double> FeedDistance { get; } = new NC<double>();
 
-        public INC<int> FeedDistance = new NC<int>();
+        public INC<double> TotalDistance { get; } = new NC<double>();
 
-        public INC<int> TotalDistance = new NC<int>();
-
-        public INC<decimal> TotalPrice = new NC<decimal>();
+        public INC<decimal> TotalPrice { get; } = new NC<decimal>();
 
         public IMvxCommand NextCommand { get; }
 
@@ -83,9 +81,8 @@ namespace TransportSystems.Frontend.App.ViewModels.Booking
             {
                 Comission.Value = route.Bill.Info.CommissionPercentage;
                 DegreeOfDificulty.Value = route.Bill.Info.DegreeOfDifficulty;
-                FeedDuration.Value = route.FeedDuration;
-                FeedDistance.Value = route.FeedDistance;
-                TotalDistance.Value = route.TotalDistance;
+                FeedDistance.Value = route.FeedDistance.Meters;
+                TotalDistance.Value = route.TotalDistance.Meters;
                 TotalPrice.Value = route.Bill.TotalCost;
             }
         }
@@ -95,13 +92,12 @@ namespace TransportSystems.Frontend.App.ViewModels.Booking
             var route = BookingResponse.Routes.Find(r => r.Title.Equals(City.Value));
             var booking = new BookingDM
             {
-                Customer = new CustomerDM(),
-                RootAddress = route.RootAddress,
+                MarketId = route.MarketId,
                 Waypoints = Model.Waypoints,
+                TimeOfDelivery = DateTime.Now.Add(route.AvgDeliveryTime),
+                Customer = new CustomerDM(),
                 Cargo = Model.Cargo,
-                Basket = Model.Basket,
-                BillInfo = route.Bill.Info,
-                TimeOfDelivery = DateTime.Now.Add(route.AvgDeliveryTime)
+                Bill = route.Bill
             };
 
             await NavigationService.Navigate<CustomerViewModel, BookingDM>(booking);

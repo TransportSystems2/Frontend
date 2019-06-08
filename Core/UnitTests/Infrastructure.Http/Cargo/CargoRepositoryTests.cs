@@ -12,30 +12,6 @@ using Xunit;
 
 namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Http.Cargo
 {
-    public class CargoRepositoryTestSuite
-    {
-        public CargoRepositoryTestSuite()
-        {
-            APIManagerMock = new Mock<IAPIManager>();
-            MappingServiceMock = new Mock<IMappingService>();
-            CargoRepository = new CargoRepository(APIManagerMock.Object, MappingServiceMock.Object);
-
-            CargoAPIMock = new Mock<ICargoAPI>();
-
-            APIManagerMock
-                .Setup(m => m.Get<ICargoAPI>((External.Models.Models.RequestPriority)RequestPriority.UserInitiated))
-                .Returns(CargoAPIMock.Object);
-        }
-
-        public Mock<IAPIManager> APIManagerMock { get; }
-
-        public Mock<IMappingService> MappingServiceMock { get; }
-
-        public ICargoRepository CargoRepository { get; }
-
-        public Mock<ICargoAPI> CargoAPIMock { get; }
-    }
-
     public class CargoRepositoryTests
     {
         public CargoRepositoryTests()
@@ -69,6 +45,30 @@ namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Http.Cargo
                 .Verify(m => m.Map<CargoCatalogItemsDM>(externalCatalogItems), Times.Once);
                 
             Assert.Equal(domainCatalogItems, items);
+        }
+
+        protected class CargoRepositoryTestSuite
+        {
+            public CargoRepositoryTestSuite()
+            {
+                APIManagerMock = new Mock<IAPIManager>();
+                MappingServiceMock = new Mock<IMappingService>();
+                CargoRepository = new CargoRepository(APIManagerMock.Object, MappingServiceMock.Object);
+
+                CargoAPIMock = new Mock<ICargoAPI>();
+
+                APIManagerMock
+                    .Setup(m => m.Get<ICargoAPI>((External.Models.Models.RequestPriority)RequestPriority.UserInitiated))
+                    .Returns(CargoAPIMock.Object);
+            }
+
+            public Mock<IAPIManager> APIManagerMock { get; }
+
+            public Mock<IMappingService> MappingServiceMock { get; }
+
+            public ICargoRepository CargoRepository { get; }
+
+            public Mock<ICargoAPI> CargoAPIMock { get; }
         }
     }
 }

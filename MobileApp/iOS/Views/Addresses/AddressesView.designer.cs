@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Addresses
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Addresses
 {
 	[Register ("AddressesView")]
 	partial class AddressesView

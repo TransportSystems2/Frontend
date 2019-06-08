@@ -8,7 +8,7 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp.Driver
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.SignUp.Driver
 {
     [Register ("DriverView")]
     partial class DriverView

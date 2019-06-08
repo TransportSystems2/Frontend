@@ -48,7 +48,6 @@ namespace Client
             var refreshedToken = await tokenService.RefreshToken(token.RefreshToken);
             var introspectionResponse = await introspectionService.IntrospectToken(refreshedToken.AccessToken);
             var userInfo = await userInfoService.GetUserInfo(refreshedToken.AccessToken);
-            var t = "";
         }
     }
 }

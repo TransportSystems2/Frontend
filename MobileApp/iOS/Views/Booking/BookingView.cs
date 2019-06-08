@@ -6,7 +6,7 @@ using MvvmCross.Platforms.Ios.Binding.Views;
 using TransportSystems.Frontend.App.ViewModels.Booking;
 using UIKit;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Booking
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Booking
 {
     public partial class BookingView : BaseView
     {
@@ -34,7 +34,6 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.Booking
             set.Bind(ComissionTextField).To(vm => vm.Comission);
             set.Bind(DegreeOfDifficultyTextField).To(vm => vm.DegreeOfDificulty);
             set.Bind(FeedDistanceValueLabel).To(vm => vm.FeedDistance);
-            set.Bind(FeedDurationValueLabel).To(vm => vm.FeedDuration);
             set.Bind(TotalDistanceValueLabel).To(vm => vm.TotalDistance);
             set.Bind(TotalPriceValueLabel).To(vm => vm.TotalPrice);
             set.Bind(NextButton).To(vm => vm.NextCommand);
@@ -48,4 +47,3 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.Booking
         }
     }
 }
-

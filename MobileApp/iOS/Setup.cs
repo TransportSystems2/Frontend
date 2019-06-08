@@ -4,7 +4,7 @@ using MvvmCross.IoC;
 using MvvmCross.Platforms.Ios.Core;
 using MvvmCross.Plugin.Json;
 
-namespace TransportSystems.Frontend.MobileApp.iOS
+namespace TransportSystems.Frontend.MobileApp.Ios
 {
     public class Setup : MvxIosSetup<App.Application>
     {

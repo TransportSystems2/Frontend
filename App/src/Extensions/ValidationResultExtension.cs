@@ -22,6 +22,7 @@ namespace TransportSystems.Frontend.App.Extensions
                     dictionary[key] = text;
                 }
             }
+
             return dictionary;
         }
     }

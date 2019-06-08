@@ -5,7 +5,7 @@ using MvvmCross.Platforms.Ios.Binding.Views;
 using TransportSystems.Frontend.App.ViewModels.Address;
 using UIKit;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Addresses
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Addresses
 {
     public partial class AddressesView : BaseView
     {
@@ -47,4 +47,3 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.Addresses
         }
     }
 }
-

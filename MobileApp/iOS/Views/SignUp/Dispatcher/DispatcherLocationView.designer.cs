@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp.Dispatcher
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.SignUp.Dispatcher
 {
 	[Register ("DispatcherLocationView")]
 	partial class DispatcherLocationView

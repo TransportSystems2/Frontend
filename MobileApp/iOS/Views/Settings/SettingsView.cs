@@ -2,7 +2,7 @@
 using MvvmCross.Platforms.Ios.Presenters.Attributes;
 using TransportSystems.Frontend.App.ViewModels.Settings;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Settings
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Settings
 {
     [MvxTabPresentation(WrapInNavigationController = true, TabName = "Settings", TabIconName = "Screens_Settings_Icon")]
     public partial class SettingsView : BaseView

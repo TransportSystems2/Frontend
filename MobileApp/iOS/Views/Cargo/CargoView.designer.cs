@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Cargo
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Cargo
 {
 	[Register ("CargoView")]
 	partial class CargoView

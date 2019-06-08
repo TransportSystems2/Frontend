@@ -9,6 +9,10 @@ namespace TransportSystems.Frontend.App.ViewModels.SignIn
 {
     public class SignInPhoneViewModel : BaseViewModel
     {
+        public readonly INC<string> CountryCode = new NC<string>();
+
+        public readonly INC<string> PhoneNumber = new NC<string>();
+
         public SignInPhoneViewModel(ISignInService signUpService)
         {
             SignIpService = signUpService;
@@ -16,18 +20,12 @@ namespace TransportSystems.Frontend.App.ViewModels.SignIn
             GetCodeCommand = new MvxAsyncCommand(GetCodeAsync);
         }
 
-        public readonly INC<string> CountryCode = new NC<string>();
-
-        public readonly INC<string> PhoneNumber = new NC<string>();
-
         public IMvxCommand GetCodeCommand { get; private set; }
 
         protected ISignInService SignIpService { get; }
 
         public override void Prepare()
         {
-            Title.Value = "Авторизация";
-
 #if DEBUG
             CountryCode.Value = "7";
             PhoneNumber.Value = "9159771817";
@@ -38,7 +36,6 @@ namespace TransportSystems.Frontend.App.ViewModels.SignIn
 
         private async Task GetCodeAsync()
         {
-
             var phone = $"{CountryCode.Value}{PhoneNumber.Value}";
 
             var success = await SignIpService.GetCodeAsync(phone);

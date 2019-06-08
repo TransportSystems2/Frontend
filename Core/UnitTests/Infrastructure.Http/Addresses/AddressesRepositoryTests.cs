@@ -15,30 +15,6 @@ namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Http.Addresses
 {
     public class AddressesRepositoryTests
     {
-        public class AddressesRepositoryTestSuite
-        {
-            public AddressesRepositoryTestSuite()
-            {
-                APIManagerMock = new Mock<IAPIManager>();
-                MappingServiceMock = new Mock<IMappingService>();
-                AddressesRepository = new AddressRepository(APIManagerMock.Object, MappingServiceMock.Object);
-
-                AddressAPIMock = new Mock<IAddressesAPI>();
-
-                APIManagerMock
-                    .Setup(m => m.Get<IAddressesAPI>((External.Models.Models.RequestPriority)RequestPriority.UserInitiated))
-                    .Returns(AddressAPIMock.Object);
-            }
-
-            public Mock<IAPIManager> APIManagerMock { get; }
-
-            public Mock<IMappingService> MappingServiceMock {get;}
-
-            public IAddressRepository AddressesRepository { get; }
-
-            public Mock<IAddressesAPI> AddressAPIMock { get; }
-        }
-
         public AddressesRepositoryTests()
         {
             Suite = new AddressesRepositoryTestSuite();
@@ -111,6 +87,30 @@ namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Http.Addresses
                     Times.Once);
 
             Assert.Equal(domainListResult, addresses);
+        }
+
+        protected class AddressesRepositoryTestSuite
+        {
+            public AddressesRepositoryTestSuite()
+            {
+                APIManagerMock = new Mock<IAPIManager>();
+                MappingServiceMock = new Mock<IMappingService>();
+                AddressesRepository = new AddressRepository(APIManagerMock.Object, MappingServiceMock.Object);
+
+                AddressAPIMock = new Mock<IAddressesAPI>();
+
+                APIManagerMock
+                    .Setup(m => m.Get<IAddressesAPI>((External.Models.Models.RequestPriority)RequestPriority.UserInitiated))
+                    .Returns(AddressAPIMock.Object);
+            }
+
+            public Mock<IAPIManager> APIManagerMock { get; }
+
+            public Mock<IMappingService> MappingServiceMock { get; }
+
+            public IAddressRepository AddressesRepository { get; }
+
+            public Mock<IAddressesAPI> AddressAPIMock { get; }
         }
     }
 }

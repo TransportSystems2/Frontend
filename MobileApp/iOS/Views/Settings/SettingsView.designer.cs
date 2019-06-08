@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Settings
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Settings
 {
     [Register("SettingsView")]
     partial class SettingsView

@@ -6,7 +6,6 @@ namespace TransportSystems.Frontend.External.MockAPI.Transport
 {
     public class MockVehicleAPI : IVehicleAPI
     {
-
         public async Task<VehicleParametersEM> GetVehicleParams()
         {
             await Task.Delay(1000);

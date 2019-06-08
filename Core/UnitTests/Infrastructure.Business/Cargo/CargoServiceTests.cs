@@ -1,12 +1,5 @@
 ﻿namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Business.Cargo
 {
-    public class CargoServiceTestSuite
-    {
-        public CargoServiceTestSuite()
-        {
-        }
-    }
-
     public class CargoServiceTests
     {
         public CargoServiceTests()
@@ -15,5 +8,12 @@
         }
 
         protected CargoServiceTestSuite Suite { get; }
+
+        public class CargoServiceTestSuite
+        {
+            public CargoServiceTestSuite()
+            {
+            }
+        }
     }
 }

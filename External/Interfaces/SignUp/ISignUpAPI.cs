@@ -6,12 +6,8 @@ namespace TransportSystems.Frontend.External.SignUp
 {
     public interface ISignUpAPI
     {
-        [Post("/api/signup/dispatcher")]
+        [Post("/api/signup/company")]
         [Headers("Authorization: Bearer")]
-        Task RegisterDispatcher([Body(BodySerializationMethod.Json)] DispatcherCompanyEM dispatcherCompany);
-
-        [Post("/api/signup/driver")]
-        [Headers("Authorization: Bearer")]
-        Task RegisterDriver([Body(BodySerializationMethod.Json)] DriverCompanyEM driverCompany);
+        Task Register([Body(BodySerializationMethod.Json)] CompanyApplicationEM companyApplication);
     }
 }

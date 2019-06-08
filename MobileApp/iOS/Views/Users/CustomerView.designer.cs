@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Users
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Users
 {
 	[Register ("CustomerView")]
 	partial class CustomerView

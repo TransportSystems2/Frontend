@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.OS;
-using TransportSystems.Frontend.App.ViewModels.SignUp;
 using MvvmCross.Platforms.Android.Views;
+using TransportSystems.Frontend.App.ViewModels.SignUp;
 
 namespace TransportSystems.Frontend.MobileApp.Android.Views.SignUp
 {
@@ -12,7 +12,7 @@ namespace TransportSystems.Frontend.MobileApp.Android.Views.SignUp
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
+            SetContentView(Resource.Layout.FinishedSignUpView);
         }
     }
 }

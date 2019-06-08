@@ -1,12 +1,5 @@
 ﻿namespace TransportSystems.Frontend.Core.UnitTests.Infrastructure.Http
 {
-    public class CargoRepositoryTestSuite
-    {
-        public CargoRepositoryTestSuite()
-        {
-        }
-    }
-
     public class CargoRepositoryTests
     {
         public CargoRepositoryTests()
@@ -15,5 +8,9 @@
         }
 
         protected CargoRepositoryTestSuite Suite { get; }
+
+        protected class CargoRepositoryTestSuite
+        {
+        }
     }
 }

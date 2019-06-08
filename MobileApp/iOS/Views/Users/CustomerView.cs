@@ -3,7 +3,7 @@ using MvvmCross.Binding.BindingContext;
 using TransportSystems.Frontend.App.ViewModels.Customer;
 using UIKit;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.Users
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.Users
 {
     public partial class CustomerView : BaseView
     {
@@ -19,4 +19,3 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.Users
         }
     }
 }
-

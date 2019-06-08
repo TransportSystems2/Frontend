@@ -2,10 +2,9 @@
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Binding.Views;
-using TransportSystems.Frontend.App.ViewModels.SignUp.Driver;
 using UIKit;
 
-namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp.Driver
+namespace TransportSystems.Frontend.MobileApp.Ios.Views.SignUp.Driver
 {
     public partial class DriverLocationView : BaseView
     {
@@ -39,24 +38,6 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp.Driver
             regionPicker.ShowSelectionIndicator = true;
             RegionTextField.InputView = regionPicker;
             RegionTextField.InputAccessoryView = toolBar;
-
-            var set = this.CreateBindingSet<DriverLocationView, DriverLocationViewModel>();
-            set.Bind(provincePickerViewModel).For(p => p.SelectedItem).To(vm => vm.Province);
-            set.Bind(provincePickerViewModel).For(p => p.ItemsSource).To(vm => vm.Provincies);
-            set.Bind(cityPickerViewModel).For(p => p.SelectedItem).To(vm => vm.City);
-            set.Bind(cityPickerViewModel).For(p => p.ItemsSource).To(vm => vm.Cities);
-            set.Bind(regionPickerViewModel).For(p => p.SelectedItem).To(vm => vm.Region);
-            set.Bind(regionPickerViewModel).For(p => p.ItemsSource).To(vm => vm.Regions);
-            set.Bind(ProvinceLabel).To(vm => vm.ProvinceLabel);
-            set.Bind(ProvinceTextField).To(vm => vm.Province);
-            set.Bind(CityLabel).To(vm => vm.CityLabel);
-            set.Bind(CityTextField).To(vm => vm.City);
-            set.Bind(RegionLabel).To(vm => vm.RegionLabel);
-            set.Bind(RegionTextField).To(vm => vm.Region);
-
-            set.Bind(RegisterButton).For("Title").To(vm => vm.RegisterButtonText);
-            set.Bind(RegisterButton).To(vm => vm.RegisterCommand);
-            set.Apply();
         }
 
         [Export("DoneAction")]
@@ -68,4 +49,3 @@ namespace TransportSystems.Frontend.MobileApp.iOS.Views.SignUp.Driver
         }
     }
 }
-
