@@ -275,7 +275,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\App\src\TransportSystems.Frontend.App.csproj">
+    <ProjectReference Include="..\..\..\App\src\TransportSystems.Frontend.App.csproj">
       <Project>{4A215EA6-B735-4C2D-BA15-11E6F34CFFF4}</Project>
       <Name>TransportSystems.Frontend.App</Name>
     </ProjectReference>

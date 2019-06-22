@@ -15,5 +15,4 @@ namespace TransportSystems.Frontend.MobileApp.Android
         {
         }
     }
-
 }
