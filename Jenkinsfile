@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'ios'
+    }
     stages {
         stage('Build') {
             steps {
