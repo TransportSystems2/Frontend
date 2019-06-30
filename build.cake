@@ -27,6 +27,12 @@ Task("Install")
     "install -g /Users/aleksandr/Projects/TS2/Frontend/MobileApp/Android/Tests/" +
     $"TransportSystems.Frontend.MobileApp.Droid.Tests/bin/{configuration}/TransportSystems.Frontend.MobileApp.Droid.Tests-Signed.apk");
 });
+Task("Restore")
+    .Does(() =>
+{
+  StartProcess("msbuild", $"./MobileApp/Android/Tests/TransportSystems.Frontend.MobileApp.Droid.Tests/ /p:Configuration={configuration} /t:Restore");
+});
+
 Task("Build")
     .Does(() =>
 {
