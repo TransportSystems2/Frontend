@@ -10,7 +10,9 @@ Task("Default")
 Task("Tests")
   .Does(async () =>
 {
+  sh 'msbuild ./MobileApp/Android /p:Configuration=Debug /t:Install'
   var allTestsPassed = LaunchEmbeddedTestsReceiver(port:7777);
+  sh 'adb shell am start -a android.intent.action.MAIN -n ru.transportsystems.TransportSystems/.SplashScreen'
   if (!await allTestsPassed)
   {
       const string message = "Not all tests passed";
