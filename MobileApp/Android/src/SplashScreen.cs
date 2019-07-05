@@ -16,8 +16,8 @@ using MvvmCross.Platforms.Android.Views;
 namespace TransportSystems.Frontend.MobileApp.Android
 {
     [Activity(
+        Name="ru.transportsystems.TransportSystems.SplashScreen",
         MainLauncher = true,
-        NoHistory = true,
         ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreen : MvxSplashScreenActivity
     {
