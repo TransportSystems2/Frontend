@@ -24,7 +24,7 @@ Task("Install")
     .Does(() =>
 {
   StartProcess("adb",
-    "install -g /Users/aleksandr/Projects/TS2/Frontend/MobileApp/Android/Tests/" +
+    "install -g ./MobileApp/Android/Tests/" +
     $"TransportSystems.Frontend.MobileApp.Droid.Tests/bin/{configuration}/TransportSystems.Frontend.MobileApp.Droid.Tests-Signed.apk");
 });
 Task("Restore")
