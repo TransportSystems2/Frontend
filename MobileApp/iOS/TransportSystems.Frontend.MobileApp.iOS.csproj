@@ -244,7 +244,7 @@
     </PackageReference>
     <PackageReference Include="OxyPlot.Core" Version="2.0.0-unstable1035" />
     <PackageReference Include="OxyPlot.Xamarin.iOS" Version="1.1.0-unstable0011" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="TZStackView" Version="1.1.1" />
     <PackageReference Include="Com.Airbnb.iOS.Lottie">
       <Version>2.5.4</Version>
