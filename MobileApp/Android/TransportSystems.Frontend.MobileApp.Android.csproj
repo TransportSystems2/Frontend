@@ -57,7 +57,7 @@
     <PackageReference Include="OxyPlot.Core" Version="2.0.0-unstable1035" />
     <PackageReference Include="OxyPlot.Xamarin.Android" Version="1.1.0-unstable0011" />
     <PackageReference Include="Refractored.Controls.CircleImageView" Version="1.0.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Com.Airbnb.Android.Lottie" Version="2.7.0" />
     <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.0.0.1" />
     <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.0.3.1" />
